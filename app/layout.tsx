@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Syne } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -33,7 +34,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background dark: font-sans antialiased",
+          "bg-background font-inter antialiased",
           {
             "font-syne": syne.variable,
             "font-inter": inter.variable,
@@ -48,8 +49,9 @@ export default function RootLayout({
         > */}
           <Header />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         {/* </ThemeProvider> */}
+        <SpeedInsights/>
       </body>
     </html>
   );
