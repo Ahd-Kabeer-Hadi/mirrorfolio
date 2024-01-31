@@ -4,7 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ThemeProvider } from "@/components/ThemeProvider";
+// import { ThemeProvider } from "@/components/ThemeProvider";
 
 const syne = Syne({
   weight: "700",
@@ -33,23 +33,23 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background dark: font-sans antialiased",
           {
             "font-syne": syne.variable,
             "font-inter": inter.variable,
           }
         )}
       >
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           enableColorScheme
-        >
+        > */}
           <Header />
           {children}
-          <Footer />
-        </ThemeProvider>
+          {/* <Footer /> */}
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

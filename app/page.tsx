@@ -1,48 +1,114 @@
 import Image from "next/image";
+import me from "@/public/me.png";
+import { Button } from "@/components/ui/button";
+import ProjectCards from "@/components/ProjectCards";
+import MenteorMockup from "@/public/menteor.png";
+import menteor_mockup from "@/public/menteor-preview.png";
+import CSLab from "@/public/CSLab.png";
+import LmsDoc from "@/public/doc.png";
 
-import gradient from "../public/gradients/gradient.webp"
 
 export default function Home() {
   return (
-    <div className="h-screen overflow-auto bg-light-bg p-0 transition duration-700 dark:bg-black">
-      <div className="absolute inset-x-0 top-0 select-none">
-        <div className="relative h-[550px] w-full overflow-hidden">
-          <picture className="absolute left-1/2 top-0 z-[2] block h-[550px] w-[1440px] -translate-x-1/2 select-none">
-            <Image
-              alt="gradient"
-              draggable="false"
-              fetchPriority="high"
-              decoding="async"
-              data-nimg="fill"
-              className="select-none"
-              sizes="100vw"
-              style={{
-                position: "absolute",
-                height: "100%",
-                width: "100%",
-                left: "0",
-                top: "0",
-                right: "0",
-                bottom: "0",
-                color: "transparent",
-              }}
-              src={gradient}
-            />
-          </picture>
+    <>
+      <section className=" mt-8 grid px-5 md:px-0  md:max-w-7xl mx-auto gap-10  sm:grid-flow-row grid-cols-1 sm:grid-cols-4 ">
+        <div className=" rounded-xl col-auto flex items-center justify-between border-[1px] border-card-border/20 bg-[#18181D]/60 py-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
+          <div className="w-full  flex flex-col gap-4 justify-center px-5">
+            <p className="text-md font-mono text-[#A1A1AA] font-italic">
+              Greetings!
+            </p>
+            <h2 className="text-4xl font-syne font-semibold">I'm Kabeer</h2>
+            <div className="w-full ">
+              <Image
+                alt="Kabeer"
+                src={me}
+                width={600}
+                height={600}
+                className="max-w-3/4 rounded-full border-[1px] border-card-border/20 bg-[#18181D]/60  bg-opacity-60 backdrop-filter backdrop-blur-md "
+              />
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="h-screen flex justify-center content-center">Its on the progress</div>
-    </div>
+        <div className=" rounded-xl sm:col-span-2 flex items-center justify-between border-[1px] border-card-border/20 bg-[#18181D]/60 py-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
+          <div className="w-full  flex flex-col gap-4 justify-center px-8">
+            <h1 className="text-4xl font-syne font-semibold break-words">
+              I'm a full-stack engineer. <br /> Helping startups turn their ideas
+              into digital realities.
+            </h1>
+            <p className="text-md font-mono text-[#A1A1AA]">
+              I specialize in designing and building modern mobile and web
+              solutions.
+            </p>
+            <div className="flex w-full gap-4 sm:max-w-md">
+              <Button className="w-full rounded-xl">Get in touch</Button>
+              <Button variant="ghost" className="w-full rounded-xl">
+                View Resume
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="px-5 w-full rounded-xl col-auto flex  justify-between border-[1px] border-card-border/20 bg-[#18181D]/60 py-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
+          <div className="flex flex-col gap-4 w-full">
+            <h3 className="text-md font-mono text-[#A1A1AA] font-italic">
+              Now Building.....
+            </h3>
+            <ProjectCards
+              name="Menteor"
+              description="A platform for one-to-one mentorship caters to skill-based knowledge transfer"
+              url="https://www.menteor.space/"
+              image={MenteorMockup}
+            />
+          </div>
+        </div>
+      </section>
+      <section className="px-5 md:px-0  md:max-w-7xl mx-auto gap-10 mt-12  flex flex-col ">
+        <div className="col-span-2 flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-4xl font-syne font-semibold"> Selected Work</h2>
+            <hr className="border-[1px] border-card-border/20 w-full" />
+          </div>
+          <div className="flex flex-col gap-4 w-full">
+            <ProjectCards
+              name="Menteor - A platform for skill based one-to-one mentorship"
+              description="Menteor is a one-of-a-kind platform for personalised mentorship, combining the simplicity of a dating app with a focus on skill-based knowledge transfer. Ideal for self-motivated individuals seeking professional guidance or expertise in a specific field, Menteor connects you with a variety of skilled professionals, creatives, and craftsmen to support you on your journey."
+              url="https://www.menteor.space/"
+              image={menteor_mockup}
+              varient="detailed"
+              buttonText="View Project"
+              width={457}
+              height={565}
+            />
+            <ProjectCards
+              name="CS Lab - An on the go code editor"
+              description="CS Lab Editor, a condensed version of the renowned Replit app designed to spark a passion for coding and IT skills. Our innovative React-based editor features a captivating glassmorphism design, offering a user-friendly platform to explore the fascinating world of coding. Notably, CS Lab Editor stands out as one of only two online editors flawlessly running Python turtle graphics code and includes integrated educational games to engage students in technical skills."
+              url="https://www.menteor.space/"
+              image={CSLab}
+              varient="detailed"
+              buttonText="View Project"
+            />
+            <ProjectCards
+              name="Release Note Module for 99LMS" 
+              description="This initiative aims to simplify version update management through two integral components: a newsletter module and an actual release note module. The newsletter module seamlessly integrates with the existing email management module, utilizing backend cronjobs to automate the creation of release note templates for efficient communication. The release note module, powered by technical content writers and cutting-edge GPT models, tracks and publishes version updates at regular intervals, ensuring engaging content."
+              url="https://www.menteor.space/"
+              image={LmsDoc}
+              varient="detailed"
+              buttonText="View Project"
+              width={457}
+              height={565}
+            />
+          </div>
+        </div>
+        
+      </section>
+      {/* <section className="px-5 md:px-0  md:max-w-7xl mx-auto gap-10 mt-12  flex flex-col ">
+      <div className="col-span-1 flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-4xl font-syne font-semibold">Get to know me</h2>
+            <hr className="border-[1px] border-card-border/20 w-full" />
+          </div>
+        </div>
+
+      </section> */}
+    </>
   );
 }
-{/* <img
-  alt="gradient"
-  draggable="false"
-  fetchpriority="high"
-  decoding="async"
-  data-nimg="fill"
-  class="select-none"
-  style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-  srcset="/_next/image?url=%2Fassets%2Fgradient%2Fheader-gradient.png&amp;w=640&amp;q=75 640w, /_next/image?url=%2Fassets%2Fgradient%2Fheader-gradient.png&amp;w=750&amp;q=75 750w, /_next/image?url=%2Fassets%2Fgradient%2Fheader-gradient.png&amp;w=828&amp;q=75 828w, /_next/image?url=%2Fassets%2Fgradient%2Fheader-gradient.png&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2Fassets%2Fgradient%2Fheader-gradient.png&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2Fassets%2Fgradient%2Fheader-gradient.png&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2Fassets%2Fgradient%2Fheader-gradient.png&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2Fassets%2Fgradient%2Fheader-gradient.png&amp;w=3840&amp;q=75 3840w"
-  src="/_next/image?url=%2Fassets%2Fgradient%2Fheader-gradient.png&amp;w=3840&amp;q=75"
-></img>; */}
