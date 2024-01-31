@@ -20,7 +20,7 @@ export default function ProjectCards({
   varient = "card",
   buttonText = "View Project",
   width = 300,
-  height  = 300,
+  height = 300,
 }: ProjectCardsProps) {
   return (
     <>
@@ -29,6 +29,7 @@ export default function ProjectCards({
           <div className="flex flex-col gap-4 ">
             {image ? (
               <Image
+                loading="lazy"
                 src={image}
                 alt={name}
                 width={300}
@@ -60,30 +61,50 @@ export default function ProjectCards({
             <p className="text-3xl font-syne font-semibold">{name}</p>
             <p className="text-md font-mono text-[#A1A1AA]">{description}</p>
 
-            <Link href={url}  rel="noopener noreferrer" target="_blank" className="">
+            <Link
+              href={url}
+              rel="noopener noreferrer"
+              target="_blank"
+              className=""
+            >
               <Button variant="link" className="flex gap-2 rounded-xl pl-0">
-                {buttonText} <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" className="duration-300 transition hover:translate-x-3 p-0  ease-out"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.17 5a30.23 30.23 0 0 1 5.62 5.406c.14.174.21.384.21.594m-5.83 6a30.232 30.232 0 0 0 5.62-5.406A.949.949 0 0 0 21 11m0 0H3"></path></svg>
+                {buttonText}{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  className="duration-300 transition hover:translate-x-3 p-0  ease-out"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15.17 5a30.23 30.23 0 0 1 5.62 5.406c.14.174.21.384.21.594m-5.83 6a30.232 30.232 0 0 0 5.62-5.406A.949.949 0 0 0 21 11m0 0H3"
+                  ></path>
+                </svg>
               </Button>
             </Link>
           </div>
           <div className="hidden md:flex align-middle items-center">
-          {image ? (
-            <Link href={url}  rel="noopener noreferrer" target="_blank">
-              <div className="col-span-1 absolute bottom-0 inset-y-0 right-0 transition duration-300 ease-out hover:rotate-[-5.21deg] hover:scale-110 ">
-                <Image
-                  src={image}
-                  loading="lazy"
-                  decoding="async"
-                  alt={name}
-                  width={width}
-                  height={height}
-                  className="rounded-xl p-5  "
-                />
-              </div>
-            </Link>
-          ) : (
-            <></>
-          )}
+            {image ? (
+              <Link href={url} rel="noopener noreferrer" target="_blank">
+                <div className="col-span-1 absolute bottom-0 inset-y-0 right-0 transition duration-300 ease-out hover:rotate-[-5.21deg] hover:scale-110 ">
+                  <Image
+                    loading="lazy"
+                    src={image}
+                    decoding="async"
+                    alt={name}
+                    width={width}
+                    height={height}
+                    className="rounded-xl p-5  "
+                  />
+                </div>
+              </Link>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       )}
