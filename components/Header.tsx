@@ -7,16 +7,10 @@ import {
   PackageOpen,
   SquareUser,
   Twitter,
+  User,
 } from "lucide-react";
 import { Button } from "./ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Separator } from "./ui/separator";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 export default function Header() {
   return (
@@ -33,63 +27,39 @@ export default function Header() {
 
             <div className="flex items-center justify-end gap-2 md:gap-4">
               <Link
-                href="/"
+                href="/about"
                 className="font-syne font-medium transition-transform transform hover:scale-105"
               >
                 <div className="hidden md:flex">Story</div>
-                <Button
-                  variant="link"
-                  size="icon"
-                  className="flex md:hidden dark:bg-transparent dark:outline-none"
-                >
-                  <SquareUser size={22} />
-                </Button>
+               
               </Link>
 
               <Link
-                href="/"
+                href="/projects"
                 className="font-syne font-medium transition-transform transform hover:scale-105"
               >
                 <div className="hidden md:flex">Projects</div>
-                <Button
-                  variant="link"
-                  size="icon"
-                  className="flex md:hidden dark:bg-transparent dark:outline-none"
-                >
-                  <FolderGit2 size={22} />
-                </Button>
+               
               </Link>
               <Link
-                href="/"
+                href="/library"
                 className="font-syne font-medium transition-transform transform hover:scale-105 hidden md:flex"
               >
                 <div>Scribbles</div>
-                <Button
-                  variant="link"
-                  size="icon"
-                  className="flex md:hidden dark:bg-transparent dark:outline-none"
-                >
-                  <NotebookPen size={22} />
-                </Button>
+               
               </Link>
               <Link
-                href="/"
+                href="/contact"
                 className="font-syne font-medium transition-transform transform hover:scale-105"
               >
                 <div className="hidden md:flex">Contact</div>
 
-                <Button
-                  variant="link"
-                  size="icon"
-                  className="flex md:hidden dark:bg-transparent dark:outline-none"
-                >
-                  <Mail size={22} />
-                </Button>
+                
               </Link>
 
               <Separator
                 orientation="vertical"
-                className="h-6 w-[1px] bg-black/25 dark:bg-white/25 hidden md:block"
+                className="h-6 w-[1px] bg-[#18181D]/60 hidden md:block"
               />
               <div className="flex items-center justify-end gap-2 md:gap-4">
                 <Link
@@ -172,13 +142,7 @@ export default function Header() {
                   </svg>
                 </Link>
               </div>
-              {/* <Separator
-                orientation="vertical"
-                className="h-6 w-[1px] bg-black/25 dark:bg-white/25 "
-              />
-              <div className="hidden md:flex ">
-                <ThemeSwitcher />
-              </div> */}
+             
             </div>
           </div>
         </div>
@@ -198,7 +162,7 @@ export default function Header() {
 
             <div className="flex items-center justify-end gap-2 md:gap-4">
               <Link
-                href="/"
+                href="/about"
                 className="font-syne font-medium transition-transform transform hover:scale-105"
               >
                 <div className="hidden md:flex">Story</div>
@@ -207,12 +171,12 @@ export default function Header() {
                   size="icon"
                   className="group flex flex-1 items-center justify-center rounded-lg bg-transparent text-light-gray hover:bg-black/30 dark:hover:bg-white/10"
                 >
-                  <PackageOpen size={22} />
+                  <User size={22} />
                 </Button>
               </Link>
 
               <Link
-                href="/"
+                href="/projects"
                 className="font-syne font-medium transition-transform transform hover:scale-105"
               >
                 <div className="hidden md:flex">Projects</div>
@@ -225,7 +189,7 @@ export default function Header() {
                 </Button>
               </Link>
               <Link
-                href="/"
+                href="/library"
                 className="font-syne font-medium transition-transform transform hover:scale-105"
               >
                 <div className="hidden md:flex">Scribbles</div>
@@ -239,7 +203,7 @@ export default function Header() {
                 </Button>
               </Link>
               <Link
-                href="/"
+                href="/contact"
                 className="font-syne font-medium transition-transform transform hover:scale-105"
               >
                 <div className="hidden md:flex">Contact</div>
@@ -252,15 +216,6 @@ export default function Header() {
                   <Mail size={22} />
                 </Button>
               </Link>
-{/* 
-              <Separator
-                orientation="vertical"
-                className="h-6 w-[1px] bg-black/25 dark:bg-white/25 "
-              />
-
-              <div>
-                <ThemeSwitcher />
-              </div> */}
             </div>
           </div>
         </div>
