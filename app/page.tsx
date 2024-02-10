@@ -42,10 +42,22 @@ export default function Home() {
               solutions.
             </p>
             <div className="flex w-full gap-4 sm:max-w-md sm:pt-9 content-end">
-              <Button className="w-full rounded-xl ">Get in touch</Button>
+              <Link
+                href="https://cal.com/ahd-kabeerhadi/quick-call"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="w-full rounded-xl ">Get in touch</Button>
+              </Link>
+              <Link
+                href="https://read.cv/ahd.kabeerhadi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
               <Button variant="ghost" className="w-full rounded-xl">
-                View Resume
+                View Resume 
               </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -109,7 +121,7 @@ export default function Home() {
           </div>
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
-          <Link href="/about">
+          <Link href="https://read.cv/ahd.kabeerhadi" rel="noopener noreferrer" target="_blank">
             <div className=" rounded-xl text-center flex flex-col gap-5 items-center justify-between border-[1px] border-card-border/20 bg-[#18181D]/60 p-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
               <p className="text-lg font-syne font-bold">My Story</p>
               <p className="text-md font-mono text-[#A1A1AA]">
@@ -125,7 +137,7 @@ export default function Home() {
               />
             </div>
           </Link>
-          <Link href="/library">
+          <Link href="https://kabeerhadi.hashnode.dev/" rel="noopener noreferrer" target="_blank">
             <div className=" rounded-xl text-center flex flex-col gap-5 items-center justify-between border-[1px] border-card-border/20 bg-[#18181D]/60 p-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
               <p className="text-lg font-syne font-bold">Library</p>
               <p className="text-md font-mono text-[#A1A1AA]">
@@ -142,7 +154,7 @@ export default function Home() {
               />
             </div>
           </Link>
-          <Link href="/library">
+          <Link href="https://read.cv/ahd.kabeerhadi" rel="noopener noreferrer" target="_blank">
             <div className=" rounded-xl text-center flex flex-col gap-5 items-center justify-between border-[1px] border-card-border/20 bg-[#18181D]/60 p-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
               <p className="text-lg font-syne font-bold">Stack</p>
               <p className="text-md font-mono text-[#A1A1AA]">
@@ -172,7 +184,11 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col gap-4 px-5">
-            <Link href="/contact">
+            <Link
+              href="https://cal.com/ahd-kabeerhadi/quick-call"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="w-full rounded-xl " size={"lg"}>
                 Get in touch
               </Button>

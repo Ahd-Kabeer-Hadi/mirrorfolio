@@ -1,6 +1,4 @@
-import Image from "next/image";
 
-import gradient from "../public/gradients/gradient.webp";
 import { Separator } from "./ui/separator";
 import Link from "next/link";
 

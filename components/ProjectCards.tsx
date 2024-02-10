@@ -1,17 +1,7 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
-import Image, { StaticImageData } from "next/image";
-
-interface ProjectCardsProps {
-  name: string;
-  description: string;
-  url: string;
-  image?: StaticImageData;
-  buttonText?: string;
-  varient?: "card" | "detailed";
-  width?: number;
-  height?: number;
-}
+import Image from "next/image";
+import { ProjectCardsProps } from "@/Interfaces/ProjectCard";
 export default function ProjectCards({
   name,
   description,
