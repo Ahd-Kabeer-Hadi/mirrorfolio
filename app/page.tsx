@@ -95,7 +95,7 @@ export default function Home() {
             <ProjectCards
               name="CS Lab - An on the go code editor"
               description="CS Lab Editor, a condensed version of the renowned Replit app designed to spark a passion for coding and IT skills. Our innovative React-based editor features a captivating glassmorphism design, offering a user-friendly platform to explore the fascinating world of coding. Notably, CS Lab Editor stands out as one of only two online editors flawlessly running Python turtle graphics code and includes integrated educational games to engage students in technical skills."
-              url="https://www.menteor.space/"
+              url="/"
               image={CSLab}
               varient="detailed"
               buttonText="View Project"
@@ -103,7 +103,7 @@ export default function Home() {
             <ProjectCards
               name="Release Note Module for 99LMS"
               description="This initiative aims to simplify version update management through two integral components: a newsletter module and an actual release note module. The newsletter module seamlessly integrates with the existing email management module, utilizing backend cronjobs to automate the creation of release note templates for efficient communication. The release note module, powered by technical content writers and cutting-edge GPT models, tracks and publishes version updates at regular intervals, ensuring engaging content."
-              url="https://www.menteor.space/"
+              url="/"
               image={LmsDoc}
               varient="detailed"
               buttonText="View Project"
