@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import logo from "@/public/logo.svg";
 import {
   FolderGit2,
   Mail,
@@ -11,29 +12,35 @@ import {
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
+import Image from "next/image";
 
 export default function Header() {
   return (
     <>
-      <header className="relative z-[999] hidden px-4 md:block">
-        <div className="container mx-auto mt-8 flex h-16 w-full m-auto sticky top-5 max-w-7xl items-center justify-between rounded-xl border-[1px] border-card-border/20 bg-[#18181D]/60 py-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
+      <header className="relative  z-[999]  px-4">
+        <div className="container md:hidden  mx-auto mt-8 flex h-16 w-full justify-center m-auto sticky top-5 max-w-7xl">
+          <Link href="/">
+            <div className="text-2xl font-inter font-medium">
+              <Image height={30} width={30} alt="logo" src={logo}></Image>
+            </div>
+          </Link>
+        </div>
+        <div className="container hidden  mx-auto mt-8 md:flex h-16 w-full m-auto sticky top-5 max-w-7xl items-center justify-between rounded-xl border-[1px] border-card-border/20 bg-[#18181D]/60 py-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
           <div className="flex w-full items-center justify-between gap-2">
             <Link href="/">
               <div className="text-2xl font-inter font-medium">
-                <div className="hidden md:flex">Mirrorfolio</div>
-                <div className="flex md:hidden">MF</div>
+                <Image height={30} width={30} alt="logo" src={logo}></Image>
               </div>
             </Link>
 
             <div className="flex items-center justify-end gap-2 md:gap-4">
               {/* this is a temp change due to pages are not yet designed */}
 
-              {/* <Link
+              <Link
                 href="/about"
                 className="font-syne font-medium transition-transform transform hover:scale-105"
               >
                 <div className="hidden md:flex">Story</div>
-               
               </Link>
 
               <Link
@@ -41,23 +48,19 @@ export default function Header() {
                 className="font-syne font-medium transition-transform transform hover:scale-105"
               >
                 <div className="hidden md:flex">Projects</div>
-               
               </Link>
               <Link
                 href="/library"
                 className="font-syne font-medium transition-transform transform hover:scale-105 hidden md:flex"
               >
                 <div>Scribbles</div>
-               
               </Link>
               <Link
                 href="/contact"
                 className="font-syne font-medium transition-transform transform hover:scale-105"
               >
                 <div className="hidden md:flex">Contact</div>
-
-                
-              </Link> */}
+              </Link>
 
               <Separator
                 orientation="vertical"
@@ -156,12 +159,66 @@ export default function Header() {
           <div className="flex w-full items-center justify-between gap-2">
             <Link href="/">
               <div className="text-2xl font-inter font-medium">
-                <div className="hidden md:flex">Mirrorfolio</div>
-                <div className="flex md:hidden">MF</div>
+                <Image height={30} width={30} alt="logo" src={logo}></Image>
               </div>
             </Link>
 
             <div className="flex items-center justify-end gap-2 md:gap-4">
+              <Link
+                href="/about"
+                className="font-syne font-medium transition-transform transform hover:scale-105"
+              >
+                <div className="hidden md:flex">Story</div>
+                <Button
+                  variant="link"
+                  size="icon"
+                  className="group flex flex-1 items-center justify-center rounded-lg bg-transparent text-light-gray hover:bg-black/30 dark:hover:bg-white/10"
+                >
+                  <User size={22} />
+                </Button>
+              </Link>
+
+              <Link
+                href="/projects"
+                className="font-syne font-medium transition-transform transform hover:scale-105"
+              >
+                <div className="hidden md:flex">Projects</div>
+                <Button
+                  variant="link"
+                  size="icon"
+                  className="group flex flex-1 items-center justify-center rounded-lg bg-transparent text-light-gray hover:bg-black/30 dark:hover:bg-white/10"
+                >
+                  <FolderGit2 size={22} />
+                </Button>
+              </Link>
+              <Link
+                href="/library"
+                className="font-syne font-medium transition-transform transform hover:scale-105"
+              >
+                <div className="hidden md:flex">Scribbles</div>
+
+                <Button
+                  variant="link"
+                  size="icon"
+                  className="group flex flex-1 items-center justify-center rounded-lg bg-transparent text-light-gray hover:bg-black/30 dark:hover:bg-white/10"
+                >
+                  <NotebookPen size={22} />
+                </Button>
+              </Link>
+              <Link
+                href="/contact"
+                className="font-syne font-medium transition-transform transform hover:scale-105"
+              >
+                <div className="hidden md:flex">Contact</div>
+
+                <Button
+                  variant="link"
+                  size="icon"
+                  className="group flex flex-1 items-center justify-center rounded-lg bg-transparent text-light-gray hover:bg-black/30 dark:hover:bg-white/10"
+                >
+                  <Mail size={22} />
+                </Button>
+              </Link>
               <Link
                 href="https://www.linkedin.com/in/ahd-kabeer/"
                 className="font-syne font-medium transition-transform transform hover:scale-105"
@@ -242,62 +299,6 @@ export default function Header() {
                 </svg>
               </Link>
               {/* this is a temp change due to pages are not yet designed */}
-              {/*                 
-              <Link
-                href="/about"
-                className="font-syne font-medium transition-transform transform hover:scale-105"
-              >
-                <div className="hidden md:flex">Story</div>
-                <Button
-                  variant="link"
-                  size="icon"
-                  className="group flex flex-1 items-center justify-center rounded-lg bg-transparent text-light-gray hover:bg-black/30 dark:hover:bg-white/10"
-                >
-                  <User size={22} />
-                </Button>
-              </Link>
-
-              <Link
-                href="/projects"
-                className="font-syne font-medium transition-transform transform hover:scale-105"
-              >
-                <div className="hidden md:flex">Projects</div>
-                <Button
-                  variant="link"
-                  size="icon"
-                  className="group flex flex-1 items-center justify-center rounded-lg bg-transparent text-light-gray hover:bg-black/30 dark:hover:bg-white/10"
-                >
-                  <FolderGit2 size={22} />
-                </Button>
-              </Link>
-              <Link
-                href="/library"
-                className="font-syne font-medium transition-transform transform hover:scale-105"
-              >
-                <div className="hidden md:flex">Scribbles</div>
-
-                <Button
-                  variant="link"
-                  size="icon"
-                  className="group flex flex-1 items-center justify-center rounded-lg bg-transparent text-light-gray hover:bg-black/30 dark:hover:bg-white/10"
-                >
-                  <NotebookPen size={22} />
-                </Button>
-              </Link>
-              <Link
-                href="/contact"
-                className="font-syne font-medium transition-transform transform hover:scale-105"
-              >
-                <div className="hidden md:flex">Contact</div>
-
-                <Button
-                  variant="link"
-                  size="icon"
-                  className="group flex flex-1 items-center justify-center rounded-lg bg-transparent text-light-gray hover:bg-black/30 dark:hover:bg-white/10"
-                >
-                  <Mail size={22} />
-                </Button>
-              </Link> */}
             </div>
           </div>
         </div>

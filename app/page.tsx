@@ -10,71 +10,13 @@ import mirror from "@/public/mirror.png";
 import Link from "next/link";
 import book from "@/public/notebook.webp";
 import stack from "@/public/stack.webp";
+import Hero from "@/components/home/hero";
 
 export default function Home() {
   return (
     <>
-      <section className=" mt-8 grid px-5 md:px-0  sm:max-w-7xl  mx-auto gap-10  md:grid-flow-row grid-cols-1 sm:grid-cols-3 md:grid-cols-4 ">
-        <div className=" rounded-xl  col-auto flex items-center justify-between border-[1px] border-card-border/20 bg-[#18181D]/60 py-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
-          <div className="w-full  flex flex-col gap-4 justify-center px-5">
-            <p className="text-md font-mono text-[#A1A1AA] ">Greetings!</p>
-            <h2 className="text-4xl font-syne font-semibold">I'm Kabeer</h2>
-            <div className="w-full ">
-              <Image
-                loading="lazy"
-                alt="Kabeer"
-                src={me}
-                width={600}
-                height={600}
-                className="max-w-3/4 rounded-full border-[1px] border-card-border/20 bg-[#18181D]/60  bg-opacity-60 backdrop-filter backdrop-blur-md "
-              />
-            </div>
-          </div>
-        </div>
-        <div className=" rounded-xl sm:col-span-2 flex items-center justify-between border-[1px] border-card-border/20 bg-[#18181D]/60 py-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
-          <div className="w-full  flex flex-col gap-4 justify-center px-8">
-            <h1 className="text-4xl font-syne font-semibold break-words">
-              I'm a full-stack engineer. <br /> Helping startups turn their
-              ideas into digital realities.
-            </h1>
-            <p className="text-md font-mono text-[#A1A1AA]">
-              I specialize in designing and building modern mobile and web
-              solutions.
-            </p>
-            <div className="flex w-full gap-4 sm:max-w-md sm:pt-9 content-end">
-              <Link
-                href="https://cal.com/ahd-kabeerhadi/quick-call"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="w-full rounded-xl ">Get in touch</Button>
-              </Link>
-              <Link
-                href="https://read.cv/ahd.kabeerhadi"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-              <Button variant="ghost" className="w-full rounded-xl">
-                View Resume 
-              </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="px-5 w-full rounded-xl  flex justify-between border-[1px] border-card-border/20 bg-[#18181D]/60 py-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
-          <div className="flex flex-col gap-4 w-full">
-            <h3 className="text-md font-mono text-[#A1A1AA] ">
-              Now Building.....
-            </h3>
-            <ProjectCards
-              name="Menteor"
-              description="A platform for one-to-one mentorship caters to skill-based knowledge transfer"
-              url="https://www.menteor.space/"
-              image={MenteorMockup}
-            />
-          </div>
-        </div>
-      </section>
+    <Hero></Hero>
+    
       <section className="px-5 md:px-0  md:max-w-7xl mx-auto gap-10 mt-12  flex flex-col ">
         <div className="col-span-2 flex flex-col gap-4">
           <div className="flex flex-col gap-2">

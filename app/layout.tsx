@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "bg-background font-inter antialiased",
+          "bg-background font-inter antialiased relative",
           {
             "font-syne": syne.variable,
             "font-inter": inter.variable,
