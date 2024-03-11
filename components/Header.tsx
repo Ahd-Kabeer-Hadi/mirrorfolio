@@ -44,10 +44,10 @@ export default function Header() {
               </Link>
 
               <Link
-                href="/projects"
+                href="/work"
                 className="font-syne font-medium transition-transform transform hover:scale-105"
               >
-                <div className="hidden md:flex">Projects</div>
+                <div className="hidden md:flex">Work</div>
               </Link>
               <Link
                 href="/library"
@@ -179,10 +179,10 @@ export default function Header() {
               </Link>
 
               <Link
-                href="/projects"
+                href="/work"
                 className="font-syne font-medium transition-transform transform hover:scale-105"
               >
-                <div className="hidden md:flex">Projects</div>
+                <div className="hidden md:flex">Work</div>
                 <Button
                   variant="link"
                   size="icon"

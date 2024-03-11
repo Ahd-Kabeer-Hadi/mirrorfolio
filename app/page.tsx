@@ -1,40 +1,28 @@
 import Image from "next/image";
 import me from "@/public/me.png";
 import { Button } from "@/components/ui/button";
-import ProjectCards from "@/components/ProjectCards";
-import MenteorMockup from "@/public/menteor.png";
-import menteor_mockup from "@/public/menteor-preview.png";
-import CSLab from "@/public/CSLab.png";
-import LmsDoc from "@/public/doc.png";
 import mirror from "@/public/mirror.png";
 import Link from "next/link";
 import book from "@/public/notebook.webp";
 import stack from "@/public/stack.webp";
 import Hero from "@/components/home/hero";
+import Testimonials from "@/components/ui/testimonials";
+import { ProjectCards } from "@/components/ProjectCards";
 
 export default function Home() {
   return (
     <>
-    <Hero></Hero>
-    
-      <section className="px-5 md:px-0  md:max-w-7xl mx-auto gap-10 mt-12  flex flex-col ">
+      <Hero></Hero>
+
+      <section className="px-4 container max-w-[1024px] gap-10 mt-12  flex flex-col ">
         <div className="col-span-2 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <h2 className="text-4xl font-syne font-semibold"> Selected Work</h2>
             <hr className="border-[1px] border-card-border/20 w-full" />
           </div>
+          <ProjectCards variant="secondary"  />
           <div className="flex flex-col gap-4 w-full">
-            <ProjectCards
-              name="Menteor - A platform for skill based one-to-one mentorship"
-              description="Menteor is a one-of-a-kind platform for personalised mentorship, combining the simplicity of a dating app with a focus on skill-based knowledge transfer. Ideal for self-motivated individuals seeking professional guidance or expertise in a specific field, Menteor connects you with a variety of skilled professionals, creatives, and craftsmen to support you on your journey."
-              url="https://www.menteor.space/"
-              image={menteor_mockup}
-              varient="detailed"
-              buttonText="View Project"
-              width={457}
-              height={565}
-            />
-            <ProjectCards
+            {/* <ProjectCards
               name="CS Lab - An on the go code editor"
               description="CS Lab Editor, a condensed version of the renowned Replit app designed to spark a passion for coding and IT skills. Our innovative React-based editor features a captivating glassmorphism design, offering a user-friendly platform to explore the fascinating world of coding. Notably, CS Lab Editor stands out as one of only two online editors flawlessly running Python turtle graphics code and includes integrated educational games to engage students in technical skills."
               url="/"
@@ -51,9 +39,16 @@ export default function Home() {
               buttonText="View Project"
               width={457}
               height={565}
-            />
+            /> */}
           </div>
         </div>
+      </section>
+      <section className="px-4 container max-w-[1024px] py-10 ">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-4xl font-syne font-semibold"> Client Stories</h2>
+          <hr className="border-[1px] border-card-border/20 w-full" />
+        </div>
+        <Testimonials />
       </section>
       <section className="px-5 md:px-0  md:max-w-7xl mx-auto gap-10 mt-12 flex flex-col justify-stretch items-stretch">
         <div className="col-span-1 flex flex-col gap-4">
@@ -63,7 +58,11 @@ export default function Home() {
           </div>
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
-          <Link href="https://read.cv/ahd.kabeerhadi" rel="noopener noreferrer" target="_blank">
+          <Link
+            href="https://read.cv/ahd.kabeerhadi"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <div className=" rounded-xl text-center flex flex-col gap-5 items-center justify-between border-[1px] border-card-border/20 bg-[#18181D]/60 p-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
               <p className="text-lg font-syne font-bold">My Story</p>
               <p className="text-md font-mono text-[#A1A1AA]">
@@ -79,7 +78,11 @@ export default function Home() {
               />
             </div>
           </Link>
-          <Link href="https://kabeerhadi.hashnode.dev/" rel="noopener noreferrer" target="_blank">
+          <Link
+            href="https://kabeerhadi.hashnode.dev/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <div className=" rounded-xl text-center flex flex-col gap-5 items-center justify-between border-[1px] border-card-border/20 bg-[#18181D]/60 p-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
               <p className="text-lg font-syne font-bold">Library</p>
               <p className="text-md font-mono text-[#A1A1AA]">
@@ -96,7 +99,11 @@ export default function Home() {
               />
             </div>
           </Link>
-          <Link href="https://read.cv/ahd.kabeerhadi" rel="noopener noreferrer" target="_blank">
+          <Link
+            href="https://read.cv/ahd.kabeerhadi"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <div className=" rounded-xl text-center flex flex-col gap-5 items-center justify-between border-[1px] border-card-border/20 bg-[#18181D]/60 p-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
               <p className="text-lg font-syne font-bold">Stack</p>
               <p className="text-md font-mono text-[#A1A1AA]">
