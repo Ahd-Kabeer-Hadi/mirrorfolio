@@ -1,5 +1,4 @@
 import Image from "next/image";
-import me from "@/public/me.png";
 import { Button } from "@/components/ui/button";
 import mirror from "@/public/mirror.png";
 import Link from "next/link";
@@ -22,24 +21,7 @@ export default function Home() {
           </div>
           <ProjectCards variant="secondary"  />
           <div className="flex flex-col gap-4 w-full">
-            {/* <ProjectCards
-              name="CS Lab - An on the go code editor"
-              description="CS Lab Editor, a condensed version of the renowned Replit app designed to spark a passion for coding and IT skills. Our innovative React-based editor features a captivating glassmorphism design, offering a user-friendly platform to explore the fascinating world of coding. Notably, CS Lab Editor stands out as one of only two online editors flawlessly running Python turtle graphics code and includes integrated educational games to engage students in technical skills."
-              url="/"
-              image={CSLab}
-              varient="detailed"
-              buttonText="View Project"
-            />
-            <ProjectCards
-              name="Release Note Module for 99LMS"
-              description="This initiative aims to simplify version update management through two integral components: a newsletter module and an actual release note module. The newsletter module seamlessly integrates with the existing email management module, utilizing backend cronjobs to automate the creation of release note templates for efficient communication. The release note module, powered by technical content writers and cutting-edge GPT models, tracks and publishes version updates at regular intervals, ensuring engaging content."
-              url="/"
-              image={LmsDoc}
-              varient="detailed"
-              buttonText="View Project"
-              width={457}
-              height={565}
-            /> */}
+          
           </div>
         </div>
       </section>
@@ -59,9 +41,8 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
           <Link
-            href="https://read.cv/ahd.kabeerhadi"
-            rel="noopener noreferrer"
-            target="_blank"
+            href="/about"
+           
           >
             <div className=" rounded-xl text-center flex flex-col gap-5 items-center justify-between border-[1px] border-card-border/20 bg-[#18181D]/60 p-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
               <p className="text-lg font-syne font-bold">My Story</p>

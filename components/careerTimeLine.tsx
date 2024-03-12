@@ -2,7 +2,7 @@ interface CareerTimeLineProps {
   Post: string;
   Company: string;
   Tenure: string;
-  Description: React.ReactNode[]; // Change string[] to React.ReactNode[]
+  Description: React.ReactNode[]; 
 }
 
 const CareerTimeLine = ({
