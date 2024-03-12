@@ -2,15 +2,15 @@
 import React from "react";
 import me from "@/public/me2.png";
 import Image from "next/image";
-import { Button } from "../ui/button";
 import Link from "next/link";
 import GetInTouchButton from "./getInTouchButton";
+import { Button } from "../ui/button";
 
 export default function Hero() {
   return (
     <section className="px-4 container max-w-[1024px] ">
-      <div className="  mx-auto mt-8 flex min-h-screen items-center w-full p-1 justify-between  top-5">
-        <div className="w-full lg:w-2/3 ">
+      <div className="  mx-auto mt-8 flex  min-h-screen sm:min-h-screen items-center w-full p-1 justify-between  top-5">
+        <div className="w-full lg:w-2/3">
           <p className=" text-[#A1A1AA]  font-inter font-extralight mb-3">
             Hi there, myself
           </p>
