@@ -24,7 +24,7 @@ export default function Cooking({ from }: { from: string }) {
             </p>
             <div className=" flex w-full  gap-10">
               {from !== "project" && (
-                <Link href="/work">
+                <Link href="/projects">
                   <Button variant="outline" className="w-full rounded-xl h-12">
                     See My Projects
                   </Button>
