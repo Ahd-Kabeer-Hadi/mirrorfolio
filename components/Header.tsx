@@ -135,7 +135,7 @@ export default function Header() {
                 <div className="hidden md:flex">Work</div>
               </Link>
               <Link
-                href="/library"
+                href="/blog"
                 className="font-syne font-medium transition-transform transform hover:scale-105 hidden md:flex"
               >
                 <div>Scribbles</div>
@@ -282,7 +282,7 @@ export default function Header() {
               </Button>
             </Link>
             <Link
-              href="/library"
+              href="/blog"
               className="font-syne font-medium transition-transform transform hover:scale-105"
             >
               <Button

@@ -2,7 +2,7 @@ interface CareerTimeLineProps {
   Post: string;
   Company: string;
   Tenure: string;
-  Description: React.ReactNode[]; 
+  Description: React.ReactNode[];
 }
 
 const CareerTimeLine = ({
@@ -28,13 +28,13 @@ const CareerTimeLine = ({
         <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-400">
           {Post} at {Company}
         </h3>
-        <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+        <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-[#A1A1AA]">
           {Tenure}
         </time>
         {Description.map((description, index) => (
           <div
             key={index}
-            className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
+            className="mb-4 text-base font-normal text-[#A1A1AA] dark:text-gray-400"
           >
             {description}
           </div>
