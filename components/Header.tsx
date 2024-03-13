@@ -129,7 +129,7 @@ export default function Header() {
               </Link>
 
               <Link
-                href="/work"
+                href="/projects"
                 className="font-syne font-medium transition-transform transform hover:scale-105"
               >
                 <div className="hidden md:flex">Work</div>
@@ -270,7 +270,7 @@ export default function Header() {
             </Link>
 
             <Link
-              href="/work"
+              href="/projects"
               className="font-syne font-medium transition-transform transform hover:scale-105"
             >
               <Button
