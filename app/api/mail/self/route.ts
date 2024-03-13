@@ -3,13 +3,13 @@ import SelfNotificationEmail, { EmailInputs } from "@/emails/SelfNotification";
 import { SelfNotificationEmailProps } from "@/emails/SelfNotification";
 import { render } from "@react-email/components";
 import { NextRequest, NextResponse } from "next/server";
-const resend = new Resend("re_KqtxcgtT_PED6sydzPg2euLSBW5ghBXD7");
+const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   const requestData: SelfNotificationEmailProps = await request.json();
   const { customerName, email, customerPhone, customerMessage, submittedOn } =
     requestData;
-
+  
   try {
     const { success } = await EmailInputs.safeParse(requestData);
 
@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
 
     const { data, error } = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: "mirrorfolio@gmail.com",
+      to: process.env.NEXT_PUBLIC_RESEND_TEST_MAIL_ID as string,
       subject: "You got a new lead from Mirrorfolio!",
       html: render(
         SelfNotificationEmail({

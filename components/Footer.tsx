@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="relative mt-16  pb-28 md:pb-12">
       <Separator className="mb-12" />
-      <div className="max-w-[1024px] mx-auto flex px-4 items-start flex-col md:flex-row">
+      <div className="max-w-7xl mx-auto flex px-4 items-start flex-col md:flex-row">
         <div className="w-full flex flex-col p-5">
           <Link href="/">
             <Image height={30} width={150} alt="logo" src={fullLogo}></Image>
@@ -37,7 +37,7 @@ export default function Footer() {
                 <Link href="/work">Projects</Link>
               </li>
               <li>
-                <Link href="/library">Scribbles</Link>
+                <Link href="/blog">Scribbles</Link>
               </li>
               <li>
                 <Link href="/contact">Contact</Link>
@@ -156,7 +156,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <section className="px-4 container max-w-[1024px] ">
+      <section className="px-4 container max-w-7xl ">
         <Separator className="mb-12 mt-10" />
         <div className="w-full flex   items-center justify-between">
           <p className="text-sm font-mono text-[#A1A1AA]  ">

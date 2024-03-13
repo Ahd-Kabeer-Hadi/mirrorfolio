@@ -33,14 +33,14 @@ const ContactForm = () => {
     try {
       const { success } = EmailInputs.safeParse(data);
       if (!success) return console.error("Invalid data");
-
-      const response = await axios
-        .post("http://localhost:3000/api/mail/self", {
+      const today = new Date();
+      await axios
+        .post(`${process.env.NEXT_PUBLIC_API_URL}/mail/self`, {
           customerName: data.customerName,
           email: data.email,
           customerPhone: data.customerPhone,
           customerMessage: data.customerMessage,
-          submittedOn: Date.now().toString(),
+          submittedOn: today.toLocaleDateString(),
         })
         .then((res) => {
           if (res.data.Success) {
@@ -59,110 +59,97 @@ const ContactForm = () => {
     }
   };
   return (
-    <section className="px-4 container max-w-[1024px]">
-      <div className="w-full mb-16 mt-44">
-        <h1 className="break-words text-5xl font-bold leading-none text-onyx dark:text-white md:text-[80px]">
-          Get in touch
-        </h1>
-        <p className="mb-16 mt-4 text-base text-[#A1A1AA]  md:text-2xl">
-          Let's get connected and build something awesome.
-        </p>
-        <div className="h-[1px] w-full bg-white/40"></div>
-      </div>
-      <div>
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-8 mb-10"
+    <div>
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-8 mb-10"
+        >
+          <FormField
+            control={form.control}
+            name="customerName"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-xl font-mono">Your Name?</FormLabel>
+                <FormControl>
+                  <Input placeholder="ex: John Doe" {...field} />
+                </FormControl>
+
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-xl font-mono">
+                  Email address?
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    className="focus-within:bg-transparent focus-visible:bg-transparent"
+                    type="email"
+                    placeholder="ex: johndoe@example.com"
+                    {...field}
+                  />
+                </FormControl>
+
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="customerPhone"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-xl font-mono">
+                  Phone number?
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    type="number"
+                    placeholder="ex: (123) 456-7890"
+                    {...field}
+                  />
+                </FormControl>
+
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="customerMessage"
+            render={({ field }) => (
+              <FormItem className="mb-8">
+                <FormLabel className="text-xl font-mono">
+                  Tell me about it
+                </FormLabel>
+                <FormControl>
+                  <Textarea
+                    lang="en"
+                    rows={8}
+                    placeholder="Just let it out, we can figure it out together."
+                    {...field}
+                  />
+                </FormControl>
+
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button
+            type="submit"
+            className="w-36 md:w-40 rounded-xl inline-flex font-semibold font-syne h-12 md:text-xl"
           >
-            <FormField
-              control={form.control}
-              name="customerName"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-xl font-mono">
-                    Your Name?
-                  </FormLabel>
-                  <FormControl>
-                    <Input placeholder="ex: John Doe" {...field} />
-                  </FormControl>
-
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-xl font-mono">
-                    Email address?
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      className="focus-within:bg-transparent focus-visible:bg-transparent"
-                      type="email"
-                      placeholder="ex: johndoe@example.com"
-                      {...field}
-                    />
-                  </FormControl>
-
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="customerPhone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-xl font-mono">
-                    Phone number?
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      type="number"
-                      placeholder="ex: (123) 456-7890"
-                      {...field}
-                    />
-                  </FormControl>
-
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="customerMessage"
-              render={({ field }) => (
-                <FormItem className="mb-8">
-                  <FormLabel className="text-xl font-mono">
-                    Tell me about it
-                  </FormLabel>
-                  <FormControl>
-                    <Textarea
-                      lang="en"
-                      rows={8}
-                      placeholder="Just let it out, we can figure it out together."
-                      {...field}
-                    />
-                  </FormControl>
-
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button
-              type="submit"
-              className="w-36 md:w-40 rounded-xl inline-flex font-semibold font-syne h-12 md:text-xl"
-            >
-              Submit
-            </Button>
-          </form>
-        </Form>
-      </div>
-    </section>
+            Submit
+          </Button>
+        </form>
+      </Form>
+    </div>
   );
 };
 
