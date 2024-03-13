@@ -55,7 +55,7 @@ const items = [
           connects you with a variety of skilled professionals, creatives, and
           craftsmen to support you on your journey.
         </p>
-       <Link href={"work/menteor-platform"}> <Button
+       <Link href={"projects/menteor-platform"}> <Button
           variant={"link"}
           className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0 "
           
@@ -97,7 +97,7 @@ const items = [
           editors flawlessly running Python turtle graphics code and includes
           integrated educational games to engage students in technical skills.
         </p>
-        <Link href={"work/cslab-editor"}>
+        <Link href={"projects/cslab-editor"}>
         <Button
           variant={"link"}
           className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0 "
@@ -142,7 +142,7 @@ const items = [
           cutting-edge GPT models, tracks and publishes version updates at
           regular intervals, ensuring engaging content.
         </p>
-        <Link href={"work/lms-release-note"}>
+        <Link href={"projects/lms-release-note"}>
         <Button
           variant={"link"}
           className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0 "

@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
     requestData;
   
   try {
-    const { success } = await EmailInputs.safeParse(requestData);
+    const { success } =  EmailInputs.safeParse(requestData);
 
     if (!success) return NextResponse.json({ error: "Invalid data" });
 
