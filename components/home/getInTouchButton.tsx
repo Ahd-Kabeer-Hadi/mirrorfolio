@@ -9,7 +9,7 @@ const GetInTouchButton = () => {
     <Link href="/contact">
       <Button
         variant={"outline"}
-        className="w-full rounded-xl inline-flexflex h-12 bg-transparent  hover:bg-slate-200/25 items-center justify-center px-6 font-mediumtransition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+        className="w-full rounded-xl inline-flexflex h-12 bg-transparent  hover:bg-slate-200/25 items-center justify-center px-6 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
       >
         <p className="mb-1"> Get in touch</p>
         <Image
