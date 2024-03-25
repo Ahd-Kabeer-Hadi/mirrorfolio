@@ -26,7 +26,8 @@ export type SelfNotificationEmailProps = z.infer<typeof EmailInputs>;
 
 const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : "";
+  : ""
+  ;
 
 export const SelfNotificationEmail = ({
   customerName,

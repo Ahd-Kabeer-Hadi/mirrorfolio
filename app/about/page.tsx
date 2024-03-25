@@ -41,7 +41,7 @@ export default function About() {
               WHAT I DO
             </p>
             <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
-              Presently, I am deeply immersed in the development of
+              Presently, I am deeply immersed in the development of{" "}
               <Link
                 href="https://www.menteor.space/"
                 target="_blank"
