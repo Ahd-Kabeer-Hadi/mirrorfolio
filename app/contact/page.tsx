@@ -1,4 +1,6 @@
 import ContactForm from "@/components/Forms/ContactForm";
+import sendMail from "@/emails/mail";
+import { EmailInputs } from "../api/mail/route";
 
 export default function Contact() {
   return (

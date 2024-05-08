@@ -1,5 +1,4 @@
 "use client";
-import { EmailInputs } from "@/emails/SelfNotification";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -15,9 +14,18 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import axios from "axios";
 import { toast } from "sonner";
 import { Textarea } from "../ui/textarea";
+import sendMail from "@/app/api/mail/route";
+
+export const EmailInputs = z.object({
+  customerName: z.string(),
+  email: z.string(),
+  customerPhone: z.string().optional(),
+  customerMessage: z.string(),
+  submittedOn: z.string(),
+});
+
 const ContactForm = () => {
   const form = useForm<z.infer<typeof EmailInputs>>({
     resolver: zodResolver(EmailInputs),
@@ -34,26 +42,23 @@ const ContactForm = () => {
       const { success } = EmailInputs.safeParse(data);
       if (!success) return console.error("Invalid data");
       const today = new Date();
-      await axios
-        .post(`${process.env.NEXT_PUBLIC_API_URL}/mail/self`, {
-          customerName: data.customerName,
-          email: data.email,
-          customerPhone: data.customerPhone,
-          customerMessage: data.customerMessage,
-          submittedOn: today.toLocaleDateString(),
-        })
-        .then((res) => {
-          if (res.data.Success) {
-            toast("Thank you for reaching out!", {
-              description: "I'll get back to you shortly.",
-            });
-          } else {
-            toast("OOOPS! Something went wrong", {
-              description: " Please try again .",
-            });
-          }
-          form.reset();
+      ("use server");
+      const sendResult = await sendMail({
+        customerMessage: data.customerMessage,
+        customerName: data.customerName,
+        email: data.email,
+        customerPhone: data.customerPhone ? data.customerPhone?.toString() : "",
+        submittedOn: today.toString(),
+      });
+      if (sendResult) {
+        toast("Thank you for reaching out!", {
+          description: "I'll get back to you shortly.",
         });
+      } else {
+        toast("OOOPS! Something went wrong", {
+          description: " Please try again .",
+        });
+      }
     } catch (error) {
       console.error(error);
     }
