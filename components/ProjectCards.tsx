@@ -55,114 +55,88 @@ const items = [
           connects you with a variety of skilled professionals, creatives, and
           craftsmen to support you on your journey.
         </p>
-       <Link href={"projects/menteor-platform"}> <Button
-          variant={"link"}
-          className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0 "
-          
-        >
-          View Project
-        </Button></Link>
+        <Link href="https://github.com/mirrorfolio/menteor">
+          <Button
+            variant={"link"}
+            className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0 "
+          >
+            View Project
+          </Button>
+        </Link>
       </div>
     ),
-    header: (
-      <div className="flex overflow-hidden">
-        <Image
-          src={menteor_mockup}
-          alt="Menteor"
-          className="rounded-xl w-fit aspect-auto  transition duration-300 ease-out md:hover:rotate-[-5.21deg] md:hover:scale-90"
-        />
-      </div>
-    ),
-    className: "md:col-span-2 row-span-2",
+
   },
   {
     title: (
       <Link
-        href="#"
+        href="https://github.com/Ahd-Kabeer-Hadi/Pouch"
         rel="noopener noreferrer"
         target="_blank"
         className="text-white hover:underline text-2xl font-syne font-semibold"
       >
-        CS Lab - An on the go code editor
+        Pouch - A headless digital wallet & rewarding system
       </Link>
     ),
     description: (
       <div className="w-full">
         <p className="font-inter text-xl line-clamp-3 w-full my-3">
-          CS Lab Editor, a condensed version of the renowned Replit app designed
-          to spark a passion for coding and IT skills. Our innovative
-          React-based editor features a captivating glassmorphism design,
-          offering a user-friendly platform to explore the fascinating world of
-          coding. Notably, CS Lab Editor stands out as one of only two online
-          editors flawlessly running Python turtle graphics code and includes
-          integrated educational games to engage students in technical skills.
+          Pouch is a minimalist MVP project designed to emulate the
+          functionality of a digital wallet app. Pouch isn't just any wallet
+          app—it's a versatile platform that can be seamlessly integrated with
+          other services to serve as their wallet and reward management system.
+          I originally developed Pouch to complement my passion project,
+          Menteor, which I'm currently working on. Right now, Pouch is in its
+          MVP stage, featuring two main modules: wallet, handling all things
+          wallet-related, and treasury, designed for managing rewards by admin
+          users.
         </p>
-        <Link href={"projects/cslab-editor"}>
-        <Button
-          variant={"link"}
-          className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0 "
-        >
-          View Project
-        </Button>
+        <Link href="https://github.com/Ahd-Kabeer-Hadi/Pouch">
+          <Button
+            variant={"link"}
+            className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0 "
+          >
+            View Project
+          </Button>
         </Link>
-       
       </div>
     ),
-    header: (
-      <div className="overflow-hidden ">
-        <Image
-          src={CSLab}
-          alt="CS Lab Editor"
-          className="rounded-xl w-fit   transition duration-300 md:scale-10 md:hover:scale-90 md:rotate-[5.21deg] ease-out md:hover:rotate-0"
-        />
-      </div>
-    ),
-    className: "md:col-span-1 row-span-2 ",
+
+    
   },
   {
     title: (
       <Link
-        href="#"
+        href="https://clubsulaimani.com/"
         rel="noopener noreferrer"
         target="_blank"
         className="text-white hover:underline text-2xl font-syne font-semibold"
       >
-        Release Note Module for 99LMS
+        Club Sulaimani Website Redesign and Development
       </Link>
     ),
     description: (
       <div className="w-full">
         <p className="font-inter text-xl line-clamp-3 w-full my-3">
-          This initiative aims to simplify version update management through two
-          integral components: a newsletter module and an actual release note
-          module. The newsletter module seamlessly integrates with the existing
-          email management module, utilizing backend cronjobs to automate the
-          creation of release note templates for efficient communication. The
-          release note module, powered by technical content writers and
-          cutting-edge GPT models, tracks and publishes version updates at
-          regular intervals, ensuring engaging content.
+          During my tenure at Aufait, I played a pivotal role as the frontend
+          developer for the ClubSulaimani project, aimed at revitalizing their
+          online presence. Collaborating closely with the team, I spearheaded
+          the rebranding and development efforts to craft a dynamic website
+          tailored precisely to ClubSulaimani's unique brand identity and
+          specific requirements.
         </p>
-        <Link href={"projects/lms-release-note"}>
-        <Button
-          variant={"link"}
-          className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0 "
-        >
-          View Project
-        </Button>
+        <Link href="https://clubsulaimani.com">
+          <Button
+            variant={"link"}
+            className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0 "
+          >
+            View Project
+          </Button>
         </Link>
-       
       </div>
     ),
-    header: (
-      <div className="flex overflow-hidden aspect-video">
-        <Image
-          src={LmsDoc}
-          alt="LMS Release Notes"
-          className="rounded-xl w-fit  aspect-auto  transition duration-300 md:scale-90 md:hover:scale-100 md:rotate-[-5.21deg] ease-out hover:rotate-0"
-        />
-      </div>
-    ),
-    className: "md:col-span-3 row-span-2",
+
+    
   },
 ];
 
