@@ -31,7 +31,7 @@ export default function Hero() {
           <GetInTouchButton/>
 
             <Link
-              href="https://read.cv/ahd.kabeerhadi"
+              href="https://drive.google.com/file/d/19IAgOpDx4FgqrpJw4KH5yw-5kN2bRwUp/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
