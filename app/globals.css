@@ -123,6 +123,7 @@
 }
 code {
   @apply bg-gray-800 rounded px-1;
+  width: 100%;
 }
 
 pre {
