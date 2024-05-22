@@ -127,7 +127,7 @@ code {
 }
 
 pre {
-  @apply bg-gray-800 rounded p-4 overflow-x-scroll;
+  @apply bg-gray-800 rounded p-4 shadow-md overflow-x-scroll;
   position: relative;
   padding: 10px;
   font-size: 15px;
@@ -138,9 +138,7 @@ pre {
   line-height: 1.6;
   border: 1px solid #333;
   border-left: 3px solid #e81029;
-  color: #564;
   min-width: auto;
-  max-width: 800px;
   display: flex;
   justify-content: space-between;
 }
