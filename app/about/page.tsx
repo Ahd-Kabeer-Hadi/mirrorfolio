@@ -80,7 +80,7 @@ export default function About() {
                   Description={job.responsibilities.map((responsibility, i) => (
                     <p key={i}>
                       {responsibility}
-                      {job.links && job.links[i] && (
+                      {/* {job.links && job.links[i] && (
                         <a
                           href={job.links[i].url}
                           target="_blank"
@@ -88,7 +88,7 @@ export default function About() {
                         >
                           {job.links[i].title}
                         </a>
-                      )}
+                      )} */}
                     </p>
                   ))}
                 />

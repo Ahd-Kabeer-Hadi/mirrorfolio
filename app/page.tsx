@@ -18,8 +18,7 @@ import {
 export default function Home() {
   return (
     <>
-      <Hero/>
-
+      <Hero />
       <section className="px-4 container max-w-[1024px] gap-10 mt-12  flex flex-col ">
         <div className="col-span-2 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
