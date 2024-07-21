@@ -27,12 +27,12 @@ export default function About() {
             </p>
             <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
               I'm <span className="text-white">Ahammad Kabeer Hadi</span>, a
-              multidisciplinary self-taught software engineer with over half a
-              decade of experience in the tech industry. Hailing from Kozhikode,
-              Kerala, IND, I'm committed to crafting cutting-edge digital
-              solutions that make a lasting impact. My journey in the tech realm
-              is defined by innovation, expertise, and a relentless pursuit of
-              excellence.
+              multidisciplinary self-taught software engineer with over two and
+              a half years of experience in the tech industry. Hailing from
+              Kozhikode, Kerala, IND, I'm committed to crafting cutting-edge
+              digital solutions that make a lasting impact. My journey in the
+              tech realm is defined by innovation, expertise, and a relentless
+              pursuit of excellence.
             </p>
           </div>
           <div className="h-[1px] w-full bg-white/40"></div>
@@ -41,23 +41,20 @@ export default function About() {
               WHAT I DO
             </p>
             <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
-              Presently, I am deeply immersed in the development of{" "}
-              <Link
-                href="https://www.menteor.space/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-inter font-semibold text-white underline"
-              >
-                Menteor
-              </Link>
-              , a one-to-one mentorship platform, where I serve as the founder
-              and lead software engineer. <br /> Menteor seeks to alleviate the
-              challenges faced by self-learners by connecting them directly with
-              industry professionals and experts for guidance. As an advocate
-              for knowledge sharing, I also provide complimentary hands-on
-              training for aspiring developers.
+              I recently took a career break to serve as a teacher at an
+              educational missionary (YES India foundation) for underprivileged children in Kashmir,
+              fulfilling a long-time bucket list item and refreshing myself.
+              During this break, I also worked as a freelance web developer and
+              engaged in various personal projects to stay connected with the
+              industry. Now, I'm excited to return to the industry as a frontend
+              developer, a field I am passionate about and believe to be
+              my true purpose. Additionally, I continued my enthusiasm for
+              knowledge transfer by providing on-demand mentorship for aspiring
+              developers. My expertise lies in designing intuitive interfaces
+              and turning them into beautiful applications.
             </p>
           </div>
+
           <div className="h-[1px] w-full bg-white/40"></div>
           <div className="flex flex-col gap-2">
             <p className="font-semibold uppercase font-syne text-white ">
