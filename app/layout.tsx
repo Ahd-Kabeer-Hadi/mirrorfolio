@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const syne = Syne({
   weight: "700",
@@ -55,19 +56,7 @@ export default function RootLayout({
     })(window, document, "clarity", "script", "napesn24bd");
     `}
         </Script>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-3XQGN1GJCZ"
-        ></Script>
-        <Script strategy="afterInteractive">
-          {`
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3XQGN1GJCZ');
-`}
-        </Script>
+        <GoogleAnalytics gaId="G-3XQGN1GJCZ" />
       </body>
     </html>
   );
