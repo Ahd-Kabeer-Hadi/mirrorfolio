@@ -1,6 +1,5 @@
 // "use client";
 import menteor_mockup from "@/public/menteor-preview.png";
-
 import React from "react";
 import CSLab from "@/public/CSLab.png";
 import LmsDoc from "@/public/doc.png";
@@ -8,22 +7,27 @@ import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
+
 interface ProjectCardProps {
   variant: "primary" | "secondary";
+  limit?: number;
 }
-export function ProjectCards(variant: ProjectCardProps) {
+
+export function ProjectCards({ variant, limit }: ProjectCardProps) {
+  const displayedItems = limit ? items.slice(0, limit) : items;
+
   return (
     <>
       <BentoGrid className=" w-full md:auto-rows-[20rem] mx-0">
-        {items.map((item, index) => (
+        {displayedItems.map((item, index) => (
           <BentoGridItem key={index} {...item} />
         ))}
       </BentoGrid>
-      {variant.variant === "primary" && (
+      {variant === "primary" && (
         <div className=" py-5">
           <Button
             variant={"ghost"}
-            className="w-full rounded-xl inline-flex text-[#A1A1AA] h-12 bg-transparent hover:bg-slate-200/25 items-center justify-center px-6 font-mediumtransition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+            className="w-full rounded-xl inline-flex text-[#A1A1AA] h-12 bg-transparent hover:bg-slate-200/25 items-center justify-center px-6 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
           >
             See More
           </Button>
@@ -32,7 +36,6 @@ export function ProjectCards(variant: ProjectCardProps) {
     </>
   );
 }
-
 const items = [
   {
     title: (
@@ -42,13 +45,13 @@ const items = [
         target="_blank"
         className="text-white hover:underline text-2xl font-syne font-semibold"
       >
-        Menteor- A platform for skill based one-to-one mentorship
+        Menteor - A Platform for Skill-Based One-to-One Mentorship
       </Link>
     ),
     description: (
       <div className="w-full">
         <p className="font-inter text-xl line-clamp-3 w-full my-3">
-          Menteor is a one-of-a-kind platform for personalised mentorship,
+          Menteor is a one-of-a-kind platform for personalized mentorship,
           combining the simplicity of a dating app with a focus on skill-based
           knowledge transfer. Ideal for self-motivated individuals seeking
           professional guidance or expertise in a specific field, Menteor
@@ -65,7 +68,6 @@ const items = [
         </Link>
       </div>
     ),
-
   },
   {
     title: (
@@ -75,7 +77,7 @@ const items = [
         target="_blank"
         className="text-white hover:underline text-2xl font-syne font-semibold"
       >
-        Pouch - A headless digital wallet & rewarding system
+        Pouch - A Headless Digital Wallet & Rewarding System
       </Link>
     ),
     description: (
@@ -101,8 +103,6 @@ const items = [
         </Link>
       </div>
     ),
-
-    
   },
   {
     title: (
@@ -119,10 +119,10 @@ const items = [
       <div className="w-full">
         <p className="font-inter text-xl line-clamp-3 w-full my-3">
           During my tenure at Aufait, I played a pivotal role as the frontend
-          developer for the ClubSulaimani project, aimed at revitalizing their
+          developer for the Club Sulaimani project, aimed at revitalizing their
           online presence. Collaborating closely with the team, I spearheaded
           the rebranding and development efforts to craft a dynamic website
-          tailored precisely to ClubSulaimani's unique brand identity and
+          tailored precisely to Club Sulaimani's unique brand identity and
           specific requirements.
         </p>
         <Link href="https://clubsulaimani.com">
@@ -135,8 +135,142 @@ const items = [
         </Link>
       </div>
     ),
-
-    
+  },
+  {
+    title: (
+      <Link
+        href="https://www.figma.com/community/file/1269984523674917695/digital-fest"
+        rel="noopener noreferrer"
+        target="_blank"
+        className="text-white hover:underline text-2xl font-syne font-semibold"
+      >
+        Digital Fest Module - Streamlining Science Event Management for Schools
+      </Link>
+    ),
+    description: (
+      <div className="w-full">
+        <p className="font-inter text-xl line-clamp-3 w-full my-3">
+          The Digital Fest module is a pivotal addition to our learning
+          management system, facilitating technical and programming competitions
+          among students from subscribing schools. This module streamlines event
+          management, replacing the previously offline process with a
+          centralized and user-friendly system. From event announcements to
+          evaluating and announcing winners, the entire workflow is now
+          efficiently handled within the application.
+        </p>
+        <Link href="https://www.figma.com/community/file/1269984523674917695/digital-fest">
+          <Button
+            variant={"link"}
+            className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0 "
+          >
+            View Project
+          </Button>
+        </Link>
+      </div>
+    ),
+  },
+  {
+    title: (
+      <Link
+        href="https://www.figma.com/community/file/1269984707660820289/release-note-module"
+        rel="noopener noreferrer"
+        target="_blank"
+        className="text-white hover:underline text-2xl font-syne font-semibold"
+      >
+        Release Note Module for Learning Management System
+      </Link>
+    ),
+    description: (
+      <div className="w-full">
+        <p className="font-inter text-xl line-clamp-3 w-full my-3">
+          The Release Note Module was designed to simplify version update
+          management for a learning management system. This project consisted of
+          two key components: a newsletter module and a release note module. The
+          newsletter module was configured with several settings and a backend
+          cronjob, seamlessly integrated with the existing email management
+          system. It automated the creation of release note templates for
+          efficient communication. The release note module tracked and published
+          version updates at regular intervals, combining the expertise of
+          technical content writers and cutting-edge GPT models to produce
+          engaging content.
+        </p>
+        <Link href="https://www.figma.com/community/file/1269984707660820289/release-note-module">
+          <Button
+            variant={"link"}
+            className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0 "
+          >
+            View Project
+          </Button>
+        </Link>
+      </div>
+    ),
+  },
+  {
+    title: (
+      <Link
+        href="https://www.figma.com/community/file/1269984078143781693/cs-lab-editor-an-integrated-web-based-ide-for-beginners-and-students"
+        rel="noopener noreferrer"
+        target="_blank"
+        className="text-white hover:underline text-2xl font-syne font-semibold"
+      >
+        CS Lab Editor - An Integrated Web-Based IDE for Beginners and Students
+      </Link>
+    ),
+    description: (
+      <div className="w-full">
+        <p className="font-inter text-xl line-clamp-3 w-full my-3">
+          Welcome to CS Lab Editor, a streamlined and engaging version of the
+          renowned Replit app, designed to inspire a passion for coding and IT
+          skills among young talents. This innovative React-based editor,
+          featuring a sleek glassmorphism design, provides a user-friendly
+          platform for exploring the world of coding. CS Lab Editor is one of
+          only two online editors capable of flawlessly running Python turtle
+          graphics code, along with integrated educational games to engage
+          students and enhance their technical skills.
+        </p>
+        <Link href="https://www.figma.com/community/file/1269984078143781693/cs-lab-editor-an-integrated-web-based-ide-for-beginners-and-students">
+          <Button
+            variant={"link"}
+            className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0 "
+          >
+            View Project
+          </Button>
+        </Link>
+      </div>
+    ),
+  },
+  {
+    title: (
+      <Link
+        href="https://talentify-pi.vercel.app/"
+        rel="noopener noreferrer"
+        target="_blank"
+        className="text-white hover:underline text-2xl font-syne font-semibold"
+      >
+        Talentify: Bridging Talent and Opportunity
+      </Link>
+    ),
+    description: (
+      <div className="w-full">
+        <p className="font-inter text-xl line-clamp-3 w-full my-3">
+          Talentify bridges the gap between talented developers and companies,
+          offering skill enhancement, career growth, and rewarding work
+          experiences. For companies, we provide vetted, experienced talent
+          ready to work from day one, simplifying the hiring process. Enjoy the
+          flexibility to choose talent based on potential, not just resumes. My
+          co-founder and I decided to make this pivot to address the challenges
+          faced by developers returning to the job market after a career break.
+        </p>
+        <Link href="https://talentify-pi.vercel.app/">
+          <Button
+            variant={"link"}
+            className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0 "
+          >
+            View Project
+          </Button>
+        </Link>
+      </div>
+    ),
   },
 ];
 

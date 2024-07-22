@@ -22,10 +22,22 @@ export default function Home() {
       <section className="px-4 container max-w-[1024px] gap-10 mt-12  flex flex-col ">
         <div className="col-span-2 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <h2 className="text-4xl font-syne font-semibold"> Selected Work</h2>
+            <div className="flex justify-between items-end">
+              <h2 className="text-4xl font-syne font-semibold">
+                {" "}
+                Selected Work
+              </h2>
+              <Link
+                href={"/projects"}
+                className="text-[#A1A1AA] hover:underline hover:text-white font-syne p-0"
+
+              >
+                View All
+              </Link>
+            </div>
             <hr className="border-[1px] border-card-border/20 w-full" />
           </div>
-          <ProjectCards variant="secondary" />
+          <ProjectCards variant="secondary" limit={3} />
           <div className="flex flex-col gap-4 w-full"></div>
         </div>
       </section>
