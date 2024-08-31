@@ -12,16 +12,29 @@ interface JobExperience {
 
 const workExperience: JobExperience[] = [
   {
-    title: "Teacher and Freelancer",
-    company: "YES India foundation",
+    title: "Tech Consultant and Freelance Developer ",
+    company: "Mirrorfolio ",
     tenure: "2024 Jan - Present",
     responsibilities: [
-      "Served as a teacher while I'm on my break for underprivileged children, fulfilling a long-time aspiration and refreshing my perspective.",
-      "Worked as a freelance web developer to stay connected with the industry, undertaking various projects for clients.",
-      "Engaged in personal projects to further hone my skills and keep up with industry trends.",
-      "Provided on-demand mentorship for aspiring developers to maintain my enthusiasm for knowledge transfer.",
+      // "Served as a teacher during a break, working with underprivileged children, fulfilling a long-time aspiration and refreshing my perspective.",
+      "Currently working as a tech consultant and developer for startups with non-tech backgrounds, such as Sozial, Fozato, and Talentify.",
+      "Assisting these startups in bootstrapping, building development teams, and establishing technical foundations to kickstart their businesses.",
+      "Working as a freelance web developer, undertaking various projects for clients to achieve their goals.",
+      // "Engaged in personal projects to further hone my skills and keep up with industry trends.",
+      // "Provided on-demand mentorship for aspiring developers to maintain my enthusiasm for knowledge transfer.",
     ],
   },
+  // {
+  //   title: "Teacher and Freelancer",
+  //   company: "YES India foundation",
+  //   tenure: "2024 Jan - Present",
+  //   responsibilities: [
+  //     "Served as a teacher while I'm on my break for underprivileged children, fulfilling a long-time aspiration and refreshing my perspective.",
+  //     "Worked as a freelance web developer to stay connected with the industry, undertaking various projects for clients.",
+  //     "Engaged in personal projects to further hone my skills and keep up with industry trends.",
+  //     "Provided on-demand mentorship for aspiring developers to maintain my enthusiasm for knowledge transfer.",
+  //   ],
+  // },
   // {
   //   title: "Lead Software Engineer",
   //   company: "Menteor",

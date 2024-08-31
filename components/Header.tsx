@@ -23,7 +23,8 @@ export default function Header() {
             </Link>
           </div>
           <div className="flex w-full items-center justify-end gap-2">
-            <Link
+            <Link  target="_blank"
+              rel="noopener noreferrer"
               href="https://www.linkedin.com/in/ahd-kabeer/"
               className="font-syne font-medium transition-transform transform hover:scale-105"
             >
@@ -48,8 +49,9 @@ export default function Header() {
                 </defs>
               </svg>
             </Link>
-            <Link
-              href="https://github.com/Ahd-Kabeer-Hadi"
+            <Link  target="_blank"
+              rel="noopener noreferrer"
+              href="https://twitter.com/Ahd_Kabeerpi"
               className="font-syne font-medium transition-transform transform hover:scale-105"
             >
               <svg
@@ -72,8 +74,9 @@ export default function Header() {
                 </defs>
               </svg>
             </Link>
-            <Link
-              href="https://twitter.com/Ahd_Kabeerpi"
+            <Link  target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/Ahd-Kabeer-Hadi"
               className="font-syne font-medium transition-transform transform hover:scale-105"
             >
               <svg
@@ -101,6 +104,22 @@ export default function Header() {
                   </clipPath>
                 </defs>
               </svg>
+            </Link>
+            <Link  target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.figma.com/@kabeerhadi"
+              className="font-syne font-medium transition-transform transform hover:scale-105"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" rx="5" fill="#F1F4FC"/>
+<path d="M12.5 12C12.5 11.2928 12.7897 10.6145 13.3055 10.1144C13.8212 9.61433 14.5207 9.33337 15.25 9.33337C15.9793 9.33337 16.6788 9.61433 17.1945 10.1144C17.7103 10.6145 18 11.2928 18 12C18 12.7073 17.7103 13.3856 17.1945 13.8857C16.6788 14.3858 15.9793 14.6667 15.25 14.6667C14.5207 14.6667 13.8212 14.3858 13.3055 13.8857C12.7897 13.3856 12.5 12.7073 12.5 12V12Z" stroke="#0D0D0D" stroke-width="1.5"/>
+<path d="M7 17.3333C7 16.626 7.28973 15.9478 7.80546 15.4477C8.32118 14.9476 9.02065 14.6666 9.75 14.6666H12.5V17.3333C12.5 18.0405 12.2103 18.7188 11.6945 19.2189C11.1788 19.719 10.4793 20 9.75 20C9.02065 20 8.32118 19.719 7.80546 19.2189C7.28973 18.7188 7 18.0405 7 17.3333Z" stroke="#0D0D0D" stroke-width="1.5"/>
+<path d="M12.5 4V9.33333H15.25C15.9793 9.33333 16.6788 9.05238 17.1945 8.55228C17.7103 8.05219 18 7.37391 18 6.66667C18 5.95942 17.7103 5.28115 17.1945 4.78105C16.6788 4.28095 15.9793 4 15.25 4H12.5Z" stroke="#0D0D0D" stroke-width="1.5"/>
+<path d="M7 6.66667C7 7.37391 7.28973 8.05219 7.80546 8.55228C8.32118 9.05238 9.02065 9.33333 9.75 9.33333H12.5V4H9.75C9.02065 4 8.32118 4.28095 7.80546 4.78105C7.28973 5.28115 7 5.95942 7 6.66667Z" stroke="#0D0D0D" stroke-width="1.5"/>
+<path d="M7 12C7 12.7073 7.28973 13.3856 7.80546 13.8857C8.32118 14.3858 9.02065 14.6667 9.75 14.6667H12.5V9.33337H9.75C9.02065 9.33337 8.32118 9.61433 7.80546 10.1144C7.28973 10.6145 7 11.2928 7 12Z" stroke="#0D0D0D" stroke-width="1.5"/>
+</svg>
+
+
             </Link>
           </div>
           {/* <div className="flex w-full items-center justify-end gap-2">
@@ -152,7 +171,8 @@ export default function Header() {
                 className="h-6 w-[1px] bg-[#18181D]/60 hidden md:block"
               />
               <div className="flex items-center justify-end gap-2 md:gap-4">
-                <Link
+                <Link  target="_blank"
+              rel="noopener noreferrer"
                   href="https://www.linkedin.com/in/ahd-kabeer/"
                   className="font-syne font-medium transition-transform transform hover:scale-105"
                 >
@@ -177,8 +197,9 @@ export default function Header() {
                     </defs>
                   </svg>
                 </Link>
-                <Link
-                  href="https://github.com/Ahd-Kabeer-Hadi"
+                <Link  target="_blank"
+              rel="noopener noreferrer"
+                  href="https://twitter.com/Ahd_Kabeerpi"
                   className="font-syne font-medium transition-transform transform hover:scale-105"
                 >
                   <svg
@@ -201,8 +222,9 @@ export default function Header() {
                     </defs>
                   </svg>
                 </Link>
-                <Link
-                  href="https://twitter.com/Ahd_Kabeerpi"
+                <Link  target="_blank"
+              rel="noopener noreferrer"
+                  href="https://github.com/Ahd-Kabeer-Hadi"
                   className="font-syne font-medium transition-transform transform hover:scale-105"
                 >
                   <svg
@@ -231,6 +253,22 @@ export default function Header() {
                     </defs>
                   </svg>
                 </Link>
+                <Link  target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.figma.com/@kabeerhadi"
+              className="font-syne font-medium transition-transform transform hover:scale-105"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" rx="5" fill="#F1F4FC"/>
+<path d="M12.5 12C12.5 11.2928 12.7897 10.6145 13.3055 10.1144C13.8212 9.61433 14.5207 9.33337 15.25 9.33337C15.9793 9.33337 16.6788 9.61433 17.1945 10.1144C17.7103 10.6145 18 11.2928 18 12C18 12.7073 17.7103 13.3856 17.1945 13.8857C16.6788 14.3858 15.9793 14.6667 15.25 14.6667C14.5207 14.6667 13.8212 14.3858 13.3055 13.8857C12.7897 13.3856 12.5 12.7073 12.5 12V12Z" stroke="#0D0D0D" stroke-width="1.5"/>
+<path d="M7 17.3333C7 16.626 7.28973 15.9478 7.80546 15.4477C8.32118 14.9476 9.02065 14.6666 9.75 14.6666H12.5V17.3333C12.5 18.0405 12.2103 18.7188 11.6945 19.2189C11.1788 19.719 10.4793 20 9.75 20C9.02065 20 8.32118 19.719 7.80546 19.2189C7.28973 18.7188 7 18.0405 7 17.3333Z" stroke="#0D0D0D" stroke-width="1.5"/>
+<path d="M12.5 4V9.33333H15.25C15.9793 9.33333 16.6788 9.05238 17.1945 8.55228C17.7103 8.05219 18 7.37391 18 6.66667C18 5.95942 17.7103 5.28115 17.1945 4.78105C16.6788 4.28095 15.9793 4 15.25 4H12.5Z" stroke="#0D0D0D" stroke-width="1.5"/>
+<path d="M7 6.66667C7 7.37391 7.28973 8.05219 7.80546 8.55228C8.32118 9.05238 9.02065 9.33333 9.75 9.33333H12.5V4H9.75C9.02065 4 8.32118 4.28095 7.80546 4.78105C7.28973 5.28115 7 5.95942 7 6.66667Z" stroke="#0D0D0D" stroke-width="1.5"/>
+<path d="M7 12C7 12.7073 7.28973 13.3856 7.80546 13.8857C8.32118 14.3858 9.02065 14.6667 9.75 14.6667H12.5V9.33337H9.75C9.02065 9.33337 8.32118 9.61433 7.80546 10.1144C7.28973 10.6145 7 11.2928 7 12Z" stroke="#0D0D0D" stroke-width="1.5"/>
+</svg>
+
+
+            </Link>
               </div>
             </div>
           </div>

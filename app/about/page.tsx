@@ -27,8 +27,7 @@ export default function About() {
             </p>
             <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
               I'm <span className="text-white">Ahammad Kabeer Hadi</span>, a
-              multidisciplinary self-taught software engineer with over two and
-              a half years of experience in the tech industry. Hailing from
+              multidisciplinary self-taught software engineer with over 3+ years of experience in the tech industry. Hailing from
               Kozhikode, Kerala, IND, I'm committed to crafting cutting-edge
               digital solutions that make a lasting impact. My journey in the
               tech realm is defined by innovation, expertise, and a relentless
@@ -41,7 +40,14 @@ export default function About() {
               WHAT I DO
             </p>
             <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
-              I recently took a career break to serve as a teacher at an
+            During the first quarter of 2024, I took a strategic career break. Throughout this period, I remained actively engaged in the industry, focusing on freelance web development projects and personal initiatives. This intentional pause allowed me to refresh my perspective while simultaneously sharpening my skills.
+            </p>
+            <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
+Currently, I serve as a tech consultant and developer for startups with non-technical backgrounds, including Sozial, Fozato, and Talentify. I help these startups bootstrap their businesses, build development teams, and establish solid technical foundations. My expertise is in designing intuitive interfaces and transforming them into beautiful, functional applications.
+</p>
+            <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
+After gaining valuable experience as an independent developer, I'm now looking to transition back into the industry as a frontend developer. This role not only aligns with my passion but also offers an opportunity to contribute my diverse skills and fresh perspectives to a dynamic team environment.
+              {/* I recently took a career break to serve as a teacher at an
               educational missionary (YES India foundation) for underprivileged children in Kashmir,
               fulfilling a long-time bucket list item and refreshing myself.
               During this break, I also worked as a freelance web developer and
@@ -51,7 +57,7 @@ export default function About() {
               my true purpose. Additionally, I continued my enthusiasm for
               knowledge transfer by providing on-demand mentorship for aspiring
               developers. My expertise lies in designing intuitive interfaces
-              and turning them into beautiful applications.
+              and turning them into beautiful applications. */}
             </p>
           </div>
 
