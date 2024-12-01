@@ -13,10 +13,18 @@ export default function Footer() {
           <Link href="/">
             <Image height={30} width={150} alt="logo" src={fullLogo}></Image>
           </Link>
-          <p className="text-sm font-mono mt-5 text-[#A1A1AA] ">
-            Thanks for stopping by ッ
+          {/* <p className="text-sm font-mono mt-5 text-[#A1A1AA] ">
+          Thanks for stopping by ッ
+          </p> */}
+          <p className="text-sm font-mono mt-5 md:max-w-lg text-[#A1A1AA] ">
+          where ideas turn into impactful realities. With dedication to innovation, collaboration, and empowerment, we're here to build solutions that inspire.
+
           </p>
-          <p className="text-sm font-mono mt-5 text-[#A1A1AA] ">With hearts,</p>
+          <p className="text-sm font-mono mt-5 md:max-w-lg text-[#A1A1AA] ">
+           Together, let's shape a brighter, tech-driven future. ❤️
+
+          </p>
+          {/* <p className="text-sm font-mono mt-5 text-[#A1A1AA] ">With hearts,</p> */}
           <Image
             height={30}
             width={150}
