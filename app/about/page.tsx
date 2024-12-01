@@ -26,40 +26,64 @@ export default function About() {
               Who I am
             </p>
             <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
-              I'm <span className="text-white">Ahammad Kabeer Hadi</span>, a
-              multidisciplinary self-taught software engineer with over 3+ years of experience in the tech industry. Hailing from
-              Kozhikode, Kerala, IND, I'm committed to crafting cutting-edge
-              digital solutions that make a lasting impact. My journey in the
-              tech realm is defined by innovation, expertise, and a relentless
-              pursuit of excellence.
+              I'm <span className="text-white">Ahammad Kabeer Hadi</span>, the
+              founder of Mirrorfolio, a tech entrepreneur, consultant, and AI
+              researcher. My journey began as a self-taught software engineer,
+              proving that with passion, dedication, and relentless curiosity,
+              anyone can carve their path in the tech industry. With over 5
+              years of experience, I've grown from humble beginnings to
+              spearheading innovative projects and helping businesses thrive.
+            </p>
+            <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
+              Based in Kozhikode, Kerala, India, I am committed to creating
+              digital solutions and AI-driven applications that empower
+              startups, solve complex problems, and inspire others to pursue
+              their goals.
             </p>
           </div>
           <div className="h-[1px] w-full bg-white/40"></div>
-          <div className="flex flex-col gap-2">
-            <p className="font-semibold uppercase font-syne text-white ">
+          <div className="flex flex-col gap-4">
+            <p className="font-semibold uppercase font-syne text-white text-[20px]">
               WHAT I DO
             </p>
-            <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
-            During the first quarter of 2024, I took a strategic career break. Throughout this period, I remained actively engaged in the industry, focusing on freelance web development projects and personal initiatives. This intentional pause allowed me to refresh my perspective while simultaneously sharpening my skills.
-            </p>
-            <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
-Currently, I serve as a tech consultant and developer for startups with non-technical backgrounds, including Sozial, Fozato, and Talentify. I help these startups bootstrap their businesses, build development teams, and establish solid technical foundations. My expertise is in designing intuitive interfaces and transforming them into beautiful, functional applications.
-</p>
-            <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
-After gaining valuable experience as an independent developer, I'm now looking to transition back into the industry as a frontend developer. This role not only aligns with my passion but also offers an opportunity to contribute my diverse skills and fresh perspectives to a dynamic team environment.
-              {/* I recently took a career break to serve as a teacher at an
-              educational missionary (YES India foundation) for underprivileged children in Kashmir,
-              fulfilling a long-time bucket list item and refreshing myself.
-              During this break, I also worked as a freelance web developer and
-              engaged in various personal projects to stay connected with the
-              industry. Now, I'm excited to return to the industry as a frontend
-              developer, a field I am passionate about and believe to be
-              my true purpose. Additionally, I continued my enthusiasm for
-              knowledge transfer by providing on-demand mentorship for aspiring
-              developers. My expertise lies in designing intuitive interfaces
-              and turning them into beautiful applications. */}
-            </p>
+            <div className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter space-y-4">
+              <p>
+                As the Founder, Tech Consultant, and Lead Developer at{" "}
+                <span className="text-white font-bold">Mirrorfolio</span>, I
+                specialize in:
+              </p>
+              <ul className="list-disc list-inside space-y-2">
+                <li>
+                  <span className="text-white font-semibold">
+                    Startup Enablement:
+                  </span>{" "}
+                  Guiding ventures like Ntouch, Menteor, Fozato, and Talentify
+                  in building development teams, establishing technical
+                  foundations, and launching impactful products.
+                </li>
+                <li>
+                  <span className="text-white font-semibold">
+                    AI Application Development:
+                  </span>{" "}
+                  Bridging the gap between AI and business, through cutting-edge research, practical LLM implementations, and active contributions to emerging open-source projects like oTToDev.
+                </li>
+                <li>
+                  <span className="text-white font-semibold">
+                    Frontend and Full-Stack Development:
+                  </span>{" "}
+                  Delivering intuitive, scalable applications with user
+                  experience at their core.
+                </li>
+                <li>
+                  <span className="text-white font-semibold">Mentorship:</span>{" "}
+                  Sharing insights with aspiring developers, fostering a culture
+                  of learning and self-improvement.
+                </li>
+              </ul>
+            </div>
           </div>
+
+        
 
           <div className="h-[1px] w-full bg-white/40"></div>
           <div className="flex flex-col gap-2">
@@ -68,11 +92,7 @@ After gaining valuable experience as an independent developer, I'm now looking t
             </p>
             <div>
               <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
-                Throughout my professional journey, I have demonstrated
-                proficiency across various programming languages and frameworks,
-                excelling as a self-taught software engineer in diverse
-                environments. By saying that, here's a glimpse of my work
-                experience so far:
+              My career is a testament to the power of self-learning and determination, proving that with passion and perseverance, any challenge can be overcome. As a self-taught software engineer, I have honed my expertise across diverse programming languages and frameworks, delivering impactful solutions in a variety of professional settings. Here's a glimpse of my journey so far:
               </p>
               {workExperience.map((job, index) => (
                 <CareerTimeLine
@@ -99,6 +119,19 @@ After gaining valuable experience as an independent developer, I'm now looking t
             </div>
           </div>
           <div className="flex flex-col gap-2">
+            <p className="font-semibold uppercase font-syne text-white ">
+              What Drives Me
+            </p>
+            <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
+              I believe that determination, curiosity, and a commitment to
+              continuous learning are the keys to success. My journey from a
+              self-taught developer to founder and AI researcher is proof that
+              passion can transform potential into impact. While I'm proud of
+              how far I've come, I remain humble, eager to learn, and excited to
+              tackle new challenges that make a difference.
+            </p>
+          </div>
+          <div className="flex flex-col gap-2">
             <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
               I'm always eager to foster new connections and collaborations.
               Whether you prefer dropping a line via
@@ -110,7 +143,7 @@ After gaining valuable experience as an independent developer, I'm now looking t
               >
                 email
               </Link>
-              or scheduling a coffee chat on
+              or scheduling a quick chat on
               <Link
                 href="https://cal.com/ahd-kabeerhadi/quick-call"
                 target="_blank"

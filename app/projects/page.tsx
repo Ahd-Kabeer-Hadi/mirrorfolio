@@ -12,7 +12,7 @@ export default function Projects() {
             </p>
             <div className="h-[1px] w-full bg-white/40"></div>
           </div>
-          <ProjectCards variant="secondary" />
+          <ProjectCards variant="primary" limit={3} />
         </section>
       );
 }
