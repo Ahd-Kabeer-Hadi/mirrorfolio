@@ -6,7 +6,7 @@ import book from "@/public/notebook.webp";
 import stack from "@/public/stack.webp";
 import Hero from "@/components/home/hero";
 import Testimonials from "@/components/ui/testimonials";
-import { ProjectCards } from "@/components/ProjectCards";
+import { Projects } from "@/components/Projects";
 import {
   Card,
   CardContent,
@@ -19,176 +19,143 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <section className="px-4 container max-w-[1024px] gap-10 mt-12  flex flex-col ">
-        <div className="col-span-2 flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            <div className="flex justify-between items-end">
-              <h2 className="text-4xl font-syne font-semibold">
-                {" "}
-                Selected Work
-              </h2>
-              <Link
-                href={"/projects"}
-                className="text-[#A1A1AA] hover:underline hover:text-white font-syne p-0"
 
-              >
-                View All
-              </Link>
-            </div>
-            <hr className="border-[1px] border-card-border/20 w-full" />
+      {/* Selected Work Section */}
+      <section className="px-4 container max-w-7xl mt-12 flex flex-col gap-10">
+        <div className="flex flex-col gap-6">
+          <div className="flex justify-between items-center">
+            <h2 className="text-4xl font-syne font-semibold">A Glimpse of My Work</h2>
+            <Link
+              href="/projects"
+              className="text-[#A1A1AA] hover:underline hover:text-white font-syne"
+            >
+              View All
+            </Link>
           </div>
-          <ProjectCards variant="secondary" limit={3} />
-          <div className="flex flex-col gap-4 w-full"></div>
+          <hr className="border-[1px] border-card-border/20 w-full" />
+          <Projects varient="secondary" />
         </div>
       </section>
-      <section className="px-4 container max-w-[1024px] py-10 ">
-        <div className="flex flex-col gap-2">
-          <h2 className="text-4xl font-syne font-semibold"> Client Stories</h2>
+
+      {/* Client Stories Section */}
+      <section className="px-4 container max-w-7xl py-10">
+        <div className="flex flex-col gap-4">
+          <h2 className="text-4xl font-syne font-semibold">Client Stories</h2>
+          <hr className="border-[1px] border-card-border/20 w-full" />
+          <Testimonials />
+        </div>
+      </section>
+
+      {/* About Me Section */}
+      <section className="px-4 container max-w-7xl mt-12 flex flex-col gap-10">
+        <div className="flex flex-col gap-4">
+          <h2 className="text-4xl font-syne font-semibold">Get to Know Me</h2>
           <hr className="border-[1px] border-card-border/20 w-full" />
         </div>
-        <Testimonials />
-      </section>
-      <section className="px-4 container max-w-[1024px] gap-10 mt-12   flex flex-col ">
-        <div className="col-span-1 flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            <h2 className="text-4xl font-syne font-semibold">Get to know me</h2>
-            <hr className="border-[1px] border-card-border/20 w-full" />
-          </div>
-        </div>
-        <div className="grid grid-cols-1 gap-4  md:grid-cols-3 ">
-          <Card className="rounded-xl text-center flex flex-col gap-5 items-stretch justify-between border-[1px] border-card-border/20 bg-[#18181D]/60 p-5 bg-opacity-60 backdrop-filter backdrop-blur-md">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* My Story Card */}
+          <Card className="rounded-xl text-center flex flex-col gap-5 items-center justify-between bg-[#18181D]/60 border border-card-border/20 p-6 backdrop-filter backdrop-blur-md">
             <CardTitle className="text-lg font-syne font-bold">
               My Story
             </CardTitle>
-            <CardDescription className="text-md font-mono text-[#A1A1AA]">
-              Who I am and what I do
+            <CardDescription className="text-sm font-mono text-[#A1A1AA]">
+              Discover who I am and what I do.
             </CardDescription>
-            <CardContent className="w-full">
+            <CardContent>
               <Image
                 loading="lazy"
                 src={mirror}
-                alt="me"
+                alt="My story"
                 width={300}
                 height={300}
-                className=" transition duration-300 ease-out hover:rotate-[-8.21deg] rounded-full"
+                className="rounded-full transition-transform duration-300 hover:rotate-[-8.21deg]"
               />
             </CardContent>
-            <CardFooter className="flex justify-center">
+            <CardFooter>
               <Link href="/about">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="-translate-x-2 translate-y-2 rotate-45  transition duration-300 hover:rotate-[405deg] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 "
-                >
-                  <path d="m5 12 7-7 7 7"></path>
-                  <path d="M12 19V5"></path>
-                </svg>
+                <Button variant="ghost" className="text-sm">
+                  Learn More
+                </Button>
               </Link>
             </CardFooter>
           </Card>
-          <Card className="rounded-xl text-center flex flex-col gap-5 items-stretch justify-between  border-[1px] border-card-border/20 bg-[#18181D]/60 p-5 bg-opacity-60 backdrop-filter backdrop-blur-md">
+
+          {/* Scribbles Card */}
+          <Card className="rounded-xl text-center flex flex-col gap-5 items-center justify-between bg-[#18181D]/60 border border-card-border/20 p-6 backdrop-filter backdrop-blur-md">
             <CardTitle className="text-lg font-syne font-bold">
               Scribbles
             </CardTitle>
-            <CardDescription className="text-md font-mono text-[#A1A1AA]">
-              My thoughts and learnings on software development, and my journey.
+            <CardDescription className="text-sm font-mono text-[#A1A1AA]">
+              Insights and learnings from my software journey.
             </CardDescription>
-            <CardContent className="w-full">
+            <CardContent>
               <Image
                 loading="lazy"
                 src={book}
-                alt="me"
+                alt="Scribbles"
                 width={300}
                 height={300}
-                className=" transition duration-300 ease-out hover:rotate-[-8.21deg] "
+                className="transition-transform duration-300 hover:rotate-[-8.21deg]"
               />
             </CardContent>
-            <CardFooter className="flex justify-center">
+            <CardFooter>
               <Link href="/blog">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="-translate-x-2 translate-y-2 rotate-45  transition duration-300 hover:rotate-[405deg] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 "
-                >
-                  <path d="m5 12 7-7 7 7"></path>
-                  <path d="M12 19V5"></path>
-                </svg>
+                <Button variant="ghost" className="text-sm">
+                  Explore Scribbles
+                </Button>
               </Link>
             </CardFooter>
           </Card>
-          <Card className="rounded-xl text-center flex flex-col gap-5 items-stretch justify-between  border-[1px] border-card-border/20 bg-[#18181D]/60 p-5 bg-opacity-60 backdrop-filter backdrop-blur-md">
+
+          {/* Stack Card */}
+          <Card className="rounded-xl text-center flex flex-col gap-5 items-center justify-between bg-[#18181D]/60 border border-card-border/20 p-6 backdrop-filter backdrop-blur-md">
             <CardTitle className="text-lg font-syne font-bold">Stack</CardTitle>
-            <CardDescription className="text-md font-mono text-[#A1A1AA]">
-              Languages frameworks and tools I use in my projects
+            <CardDescription className="text-sm font-mono text-[#A1A1AA]">
+              Tools, frameworks, and languages I use.
             </CardDescription>
-            <CardContent className="w-full">
+            <CardContent>
               <Image
                 loading="lazy"
                 src={stack}
-                alt="me"
-                width={330}
-                height={330}
-                className=" transition duration-300 ease-out hover:rotate-[-8.21deg] rounded-full"
+                alt="Stack"
+                width={300}
+                height={300}
+                className="rounded-full transition-transform duration-300 hover:rotate-[-8.21deg]"
               />
             </CardContent>
-            <CardFooter className="flex justify-center items-baseline">
+            <CardFooter>
               <Link href="/uses">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="-translate-x-2 translate-y-2 rotate-45  transition duration-300 hover:rotate-[405deg] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 "
-                >
-                  <path d="m5 12 7-7 7 7"></path>
-                  <path d="M12 19V5"></path>
-                </svg>
+                <Button variant="ghost" className="text-sm">
+                  Explore Stack
+                </Button>
               </Link>
             </CardFooter>
           </Card>
         </div>
       </section>
-      <section className="px-4 container max-w-[1024px] gap-10 mt-12  grid">
-        <div className="rounded-xl flex flex-col md:flex-row gap-5 items-center  justify-around border-[1px] border-card-border/20 bg-[#18181D]/60 py-5 bg-opacity-60 backdrop-filter backdrop-blur-md ">
-          <div className="flex flex-col gap-4 px-5">
-            <h2 className="text-4xl font-syne font-semibold">
-              Let's work together
+
+      {/* Call-to-Action Section */}
+      <section className="px-4 container max-w-7xl mt-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-6 bg-[#18181D]/60 border border-card-border/20 rounded-xl backdrop-filter backdrop-blur-md">
+          <div className="flex flex-col gap-4">
+            <h2 className="text-3xl font-syne font-semibold">
+              Let's Build Together
             </h2>
-            <p className="text-md font-mono text-[#A1A1AA] ">
-              Want to discuss an opportunity to create something great? I am
-              ready when you are.
+            <p className="text-sm font-mono text-[#A1A1AA]">
+              If you're ready to take your idea to the next level, let's talk.
+              Schedule a consultation, and together, we'll create something
+              extraordinary.
             </p>
           </div>
-          <div className="flex flex-col gap-4 px-5">
-            <Link
-              href="https://cal.com/ahd-kabeerhadi/quick-call"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="w-full rounded-xl " size={"lg"}>
-                Get in touch
-              </Button>
-            </Link>
-          </div>
+          <Link
+            href="https://cal.com/ahd-kabeerhadi/discovery-sessions"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="w-full md:w-auto rounded-xl" size="lg">
+              Get in Touch
+            </Button>
+          </Link>
         </div>
       </section>
     </>

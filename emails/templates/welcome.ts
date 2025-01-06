@@ -586,7 +586,7 @@ export const welcomeMailTemplate = `<!DOCTYPE html>
 <center style="color:#000000; font-family:Arial, sans-serif; font-size:16px">
 <!
                                     [endif]--><a
-                                      href="https://cal.com/ahd-kabeerhadi/free-consultation"
+                                      href="https://cal.com/ahd-kabeerhadi/discovery-sessions"
                                       style="
                                         text-decoration: none;
                                         display: inline-block;

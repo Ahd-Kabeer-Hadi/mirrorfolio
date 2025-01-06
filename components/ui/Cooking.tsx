@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Cooking({ from }: { from: string }) {
   return (
-    <section className="px-4 container max-w-[1024px]">
+    <section className="px-4 container max-w-7xl">
       <div className="w-full mb-22 mt-44">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
           <Image src={pilot} alt="pilot" />

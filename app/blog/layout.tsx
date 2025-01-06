@@ -13,9 +13,7 @@ export default async function BlogLayout({
   return (
     <>
       <Providers>
-        <main className="px-4 container max-w-[1024px]">
-          {children}
-        </main>
+        <main className="px-4 container max-w-7xl">{children}</main>
       </Providers>
     </>
   );
