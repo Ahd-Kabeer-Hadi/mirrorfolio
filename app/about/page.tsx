@@ -9,7 +9,7 @@ import GetInTouchButton from "@/components/home/getInTouchButton";
 
 export default function About() {
   return (
-    <section className="px-4 container max-w-[1024px]">
+    <section className="px-4 container max-w-7xl">
       <div className="w-full mb-16 mt-44">
         <h1 className="break-words text-5xl font-bold leading-none text-whitemd:text-[80px]">
           A little bit about me
@@ -65,7 +65,9 @@ export default function About() {
                   <span className="text-white font-semibold">
                     AI Application Development:
                   </span>{" "}
-                  Bridging the gap between AI and business, through cutting-edge research, practical LLM implementations, and active contributions to emerging open-source projects like oTToDev.
+                  Bridging the gap between AI and business, through cutting-edge
+                  research, practical LLM implementations, and active
+                  contributions to emerging open-source projects like oTToDev.
                 </li>
                 <li>
                   <span className="text-white font-semibold">
@@ -83,8 +85,6 @@ export default function About() {
             </div>
           </div>
 
-        
-
           <div className="h-[1px] w-full bg-white/40"></div>
           <div className="flex flex-col gap-2">
             <p className="font-semibold uppercase font-syne text-white ">
@@ -92,7 +92,12 @@ export default function About() {
             </p>
             <div>
               <p className="text-[18px] leading-[160%] text-[#A1A1AA] font-inter">
-              My career is a testament to the power of self-learning and determination, proving that with passion and perseverance, any challenge can be overcome. As a self-taught software engineer, I have honed my expertise across diverse programming languages and frameworks, delivering impactful solutions in a variety of professional settings. Here's a glimpse of my journey so far:
+                My career is a testament to the power of self-learning and
+                determination, proving that with passion and perseverance, any
+                challenge can be overcome. As a self-taught software engineer, I
+                have honed my expertise across diverse programming languages and
+                frameworks, delivering impactful solutions in a variety of
+                professional settings. Here's a glimpse of my journey so far:
               </p>
               {workExperience.map((job, index) => (
                 <CareerTimeLine
@@ -145,7 +150,7 @@ export default function About() {
               </Link>
               or scheduling a quick chat on
               <Link
-                href="https://cal.com/ahd-kabeerhadi/quick-call"
+                href="https://cal.com/ahd-kabeerhadi/discovery-sessions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-inter font-semibold  mx-2 text-white underline"

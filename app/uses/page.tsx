@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function page() {
   return (
-    <section className="px-4 container max-w-[1024px]">
+    <section className="px-4 container max-w-7xl">
       <div className="w-full mb-16 mt-44">
         <h1 className="break-words text-5xl font-bold leading-none text-white md:text-[80px]">
           Tech Stack
