@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { FolderGit2, Home, Mail, NotebookPen, User } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   motion,
   useMotionValue,
@@ -26,9 +26,22 @@ const navItems = [
 export function BottomNav() {
   const [showNav, setShowNav] = useState(false);
   const { scrollY } = useScroll();
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 768); // md breakpoint
+    };
+    updateScreenSize();
+    window.addEventListener("resize", updateScreenSize);
+    return () => window.removeEventListener("resize", updateScreenSize);
+  }, []);
+
   let mouseX = useMotionValue(Infinity);
   useMotionValueEvent(scrollY, "change", (latest) => {
     // showNav nav after first 100vh
+    if( !isLargeScreen ) {
+      return setShowNav(true);
+    }
     const viewportHeight = window.innerHeight;
     if (latest > viewportHeight && !showNav) {
       setShowNav(true);
@@ -38,20 +51,33 @@ export function BottomNav() {
   });
 
   return (
-    <motion.header
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: showNav ? 1 : 0, y: showNav ? 0 : 100 }}
-      transition={{ duration: 0.3 }}
-      onMouseMove={(e) => mouseX.set(e.pageX)}
-      onMouseLeave={() => mouseX.set(Infinity)}
-      className="fixed inset-x-0 bottom-0 z-[99999] w-full px-4 pb-6"
-    >
-      <motion.div className="mx-auto flex h-16 md:h-24 max-w-fit md:max-w-7xl md:items-center md:justify-between items-end gap-4 rounded-2xl border-[1px] border-card-border/20 bg-[#18181D]/60 md:px-8 md:py-6 px-4 py-3 backdrop-blur-md">
-        {navItems.map((item) => (
-          <IconContainer mouseX={mouseX} key={item.title} {...item} />
-        ))}
-      </motion.div>
-    </motion.header>
+    <>
+    {isLargeScreen && <motion.header
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: showNav ? 1 : 0, y: showNav ? 0 : 100 }}
+        transition={{ duration: 0.3 }}
+        onMouseMove={(e) => mouseX.set(e.pageX)}
+        onMouseLeave={() => mouseX.set(Infinity)}
+        className="fixed inset-x-0 bottom-0 z-[99999] w-full px-4 pb-6 hidden md:block"
+      >
+        <motion.div className="mx-auto flex h-16 md:h-24 max-w-fit md:max-w-3xl md:items-center md:justify-between items-end gap-4 rounded-2xl border-[1px] border-card-border/20 bg-[#18181D]/60 md:px-8 md:py-6 px-4 py-3 backdrop-blur-md">
+          {navItems.map((item) => (
+            <IconContainer mouseX={mouseX} key={item.title} {...item} />
+          ))}
+        </motion.div>
+      </motion.header>}
+      
+      <motion.header
+        
+        className="fixed inset-x-0 bottom-0 z-[99999] w-full px-4 pb-6 block md:hidden"
+      >
+        <motion.div className="mx-auto flex h-16 md:h-24 max-w-fit md:max-w-7xl md:items-center md:justify-between items-end gap-4 rounded-2xl border-[1px] border-card-border/20 bg-[#18181D]/60 md:px-8 md:py-6 px-4 py-3 backdrop-blur-md">
+          {navItems.map((item) => (
+            <IconContainer mouseX={mouseX} key={item.title} {...item} />
+          ))}
+        </motion.div>
+      </motion.header>
+    </>
   );
 }
 
@@ -114,7 +140,7 @@ function IconContainer({
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="absolute -top-8 left-1/2 w-fit -translate-x-1/2 whitespace-nowrap rounded-full border border-white/10 bg-[#18181D]/90 px-2 py-0.5 text-xs md:text-base text-white backdrop-blur-md"
+              className="absolute -top-10 left-1/2 w-fit -translate-x-1/2  whitespace-nowrap rounded-xl border border-white/10 bg-[#18181D]/90 px-4 py-1 text-xs md:text-base text-white backdrop-blur-md"
             >
               {title}
             </motion.div>
