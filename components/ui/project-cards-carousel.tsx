@@ -6,18 +6,12 @@ import React, {
   createContext,
   useContext,
 } from "react";
-import {
-  IconArrowNarrowLeft,
-  IconArrowNarrowRight,
-  IconX,
-} from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { Button } from "./button";
 import { X } from "lucide-react";
-
 interface CarouselProps {
   items: JSX.Element[];
   initialScroll?: number;
@@ -92,6 +86,55 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
     <CarouselContext.Provider
       value={{ onCardClose: handleCardClose, currentIndex }}
     >
+      {" "}
+      <div className="flex justify-end gap-2 ">
+        <Button
+          className="relative z-40  rounded-full flex items-center justify-center disabled:opacity-50"
+          onClick={scrollLeft}
+          disabled={!canScrollLeft}
+          variant={"ghost"}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            className="disabled:opacity-50 rotate-180"
+          >
+            <path
+              stroke="white"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              className="disabled:opacity-50"
+              d="M4.934 12 3.09 5.732c-.481-1.635 1.05-3.147 2.665-2.628a53.872 53.872 0 0 1 12.64 5.963C19.525 9.793 21 10.442 21 12c0 1.558-1.474 2.207-2.605 2.933a53.87 53.87 0 0 1-12.64 5.963c-1.614.519-3.146-.993-2.665-2.628L4.934 12Zm0 0h4.9"
+            ></path>
+          </svg>
+        </Button>
+        <Button
+          className="relative z-40  rounded-full flex items-center justify-center disabled:opacity-50"
+          onClick={scrollRight}
+          disabled={!canScrollRight}
+          variant={"ghost"}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            className="disabled:opacity-50"
+          >
+            <path
+              stroke="white"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              className="disabled:opacity-50"
+              d="M4.934 12 3.09 5.732c-.481-1.635 1.05-3.147 2.665-2.628a53.872 53.872 0 0 1 12.64 5.963C19.525 9.793 21 10.442 21 12c0 1.558-1.474 2.207-2.605 2.933a53.87 53.87 0 0 1-12.64 5.963c-1.614.519-3.146-.993-2.665-2.628L4.934 12Zm0 0h4.9"
+            ></path>
+          </svg>
+        </Button>
+      </div>
       <div className="relative w-full">
         <div
           className="flex w-full overflow-x-scroll overscroll-x-auto py-10 md:py-20 scroll-smooth [scrollbar-width:none]"
@@ -107,7 +150,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
           <div
             className={cn(
               "flex flex-row justify-start gap-4 pl-4",
-              "max-w-7xl mx-auto" // remove max-w-4xl if you want the carousel to span the full width of its container
+              "max-w-7xl mx-auto"
             )}
           >
             {items.map((item, index) => (
@@ -133,22 +176,6 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
               </motion.div>
             ))}
           </div>
-        </div>
-        <div className="flex justify-end gap-2 mr-10">
-          <Button
-            className="relative z-40  rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
-            onClick={scrollLeft}
-            disabled={!canScrollLeft}
-          >
-            <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
-          </Button>
-          <Button
-            className="relative z-40  rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
-            onClick={scrollRight}
-            disabled={!canScrollRight}
-          >
-            <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
-          </Button>
         </div>
       </div>
     </CarouselContext.Provider>
@@ -183,7 +210,7 @@ export const Card = ({
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   useOutsideClick(containerRef, () => handleClose());
@@ -222,8 +249,10 @@ export const Card = ({
                 variant={"secondary"}
                 size={"icon"}
               >
-                
-                <X size={18} className="h-6 w-6 text-white hover:animate-spin" />
+                <X
+                  size={18}
+                  className="h-6 w-6 text-white hover:animate-spin"
+                />
               </Button>
               <motion.p
                 layoutId={layout ? `category-${card.title}` : undefined}

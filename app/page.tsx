@@ -124,7 +124,7 @@ export default function Home() {
               />
             </CardContent>
             <CardFooter>
-              <Link href="/uses">
+              <Link href="/tools">
                 <Button variant="ghost" className="text-sm">
                   Explore Stack
                 </Button>
