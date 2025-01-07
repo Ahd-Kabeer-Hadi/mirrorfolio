@@ -1,3 +1,4 @@
+import StackCard from "@/components/tools/stackCard";
 import Cooking from "@/components/ui/Cooking";
 import {
   Accordion,
@@ -5,7 +6,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import StackCard from "@/components/uses/stackCard";
 import Image from "next/image";
 import Link from "next/link";
 
