@@ -52,7 +52,7 @@ const ContactForm = () => {
       });
       if (sendResult) {
         toast("Thank you for reaching out!", {
-          description: "I'll get back to you shortly.",
+          description: "I&apos;ll get back to you shortly.",
         });
       } else {
         toast("OOOPS! Something went wrong", {

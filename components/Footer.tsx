@@ -17,12 +17,12 @@ export default function Footer() {
           Thanks for stopping by ッ
           </p> */}
           <p className="text-sm font-mono mt-5 md:max-w-lg text-[#A1A1AA] ">
-          where ideas turn into impactful realities. With dedication to innovation, collaboration, and empowerment, we're here to build solutions that inspire.
-
+            where ideas turn into impactful realities. With dedication to
+            innovation, collaboration, and empowerment, we&apos;re here to build
+            solutions that inspire.
           </p>
           <p className="text-sm font-mono mt-5 md:max-w-lg text-[#A1A1AA] ">
-           Together, let's shape a brighter, tech-driven future. ❤️
-
+            Together, let&apos;s shape a brighter, tech-driven future. ❤️
           </p>
           {/* <p className="text-sm font-mono mt-5 text-[#A1A1AA] ">With hearts,</p> */}
           <Image

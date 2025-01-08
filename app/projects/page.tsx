@@ -8,7 +8,7 @@ export default function Projects() {
           Projects
         </h1>
         <p className="mt-4 mb-8 text-lg text-[#A1A1AA] md:text-2xl">
-          A glimpse into the projects and ideas I've brought to life.
+          A glimpse into the projects and ideas I&apos;ve brought to life.
         </p>
         <hr className="h-[1px] w-full bg-white/40" />
       </div>

@@ -16,14 +16,14 @@ const Testiments: Testimonial[] = [
   },
   {
     quote:
-      "Exceptional work! A testament to reliability. Ahammad took on the task of testing AppMap's plugins by creating projects using Next.js. His result-driven approach led to the development of a remarkable day planner application. As a Founding Designer at AppMap Inc., I can confidently say that Ahammad's dedication to delivering tangible outcomes is unmatched. He's a true asset to any team or project.",
+      "Exceptional work! A testament to reliability. Ahammad took on the task of testing AppMap&apos;s plugins by creating projects using Next.js. His result-driven approach led to the development of a remarkable day planner application. As a Founding Designer at AppMap Inc., I can confidently say that Ahammad&apos;s dedication to delivering tangible outcomes is unmatched. He&apos;s a true asset to any team or project.",
     name: "Dan Warner",
     designation: "Founding Designer at AppMap Inc.",
     src: "/people/dan.svg",
   },
   {
     quote:
-      "I am delighted to recommend Ahd. Kabeer for his exceptional skills and dedication. As a developer, Kabeer consistently delivers high-quality code and innovative solutions. His ability to tackle complex problems and his deep understanding of technology make him an invaluable asset to any team.\n\nKabeer is also one of the hardest workers I've encountered. His commitment to his projects and his proactive approach ensure that he always goes the extra mile to achieve success. Additionally, Kabeer is an excellent collaborator, communicating effectively and supporting his colleagues generously.\n\nI highly recommend Ahd. Kabeer P for any opportunity. His technical expertise, strong work ethic, and positive attitude will undoubtedly make a significant impact.",
+      "I am delighted to recommend Ahd. Kabeer for his exceptional skills and dedication. As a developer, Kabeer consistently delivers high-quality code and innovative solutions. His ability to tackle complex problems and his deep understanding of technology make him an invaluable asset to any team.\n\nKabeer is also one of the hardest workers I&apos;ve encountered. His commitment to his projects and his proactive approach ensure that he always goes the extra mile to achieve success. Additionally, Kabeer is an excellent collaborator, communicating effectively and supporting his colleagues generously.\n\nI highly recommend Ahd. Kabeer P for any opportunity. His technical expertise, strong work ethic, and positive attitude will undoubtedly make a significant impact.",
     name: "Jasir TP",
     designation: "Software Engineer - Collegue at Aufait UX",
     src: "/people/jasir.svg",
@@ -45,4 +45,3 @@ const Testiments: Testimonial[] = [
 ];
 
 export default Testiments;
-

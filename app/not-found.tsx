@@ -15,11 +15,11 @@ export default function NotFound() {
               You look lost!
             </p>
             <p className="mb-16 mt-4 text-[#A1A1AA] text-xl md:text-2xl">
-              It's okay, I'm here to help.
+              It&apos;s okay, I&apos;m here to help.
             </p>
             <Link href="/">
               <Button variant="outline" className=" rounded-xl h-12">
-                Let's go back to home.
+                Let&apos;s go back to home.
               </Button>
             </Link>
           </div>

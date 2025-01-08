@@ -1,4 +1,4 @@
-import Cooking from '@/components/ui/Cooking'
+import Cooking from &apos;@/components/ui/Cooking&apos;
 
 export default function ProjectDetails({
     params,
