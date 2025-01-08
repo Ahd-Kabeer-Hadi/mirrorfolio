@@ -22,7 +22,7 @@ import CareerTimeLine from "@/components/careerTimeLine";
 import workExperience from "@/lib/workExperience";
 import GetInTouchButton from "@/components/home/getInTouchButton";
 import { Separator } from "@/components/ui/separator";
-import { Timeline } from "@/components/ui/career-timeline";
+// import { Timeline } from "@/components/ui/career-timeline";
 
 export default function About() {
   return (
@@ -38,8 +38,8 @@ export default function About() {
           <div className="h-[1px] w-full bg-white/10"></div>
         </div>
 
-        <div className="grid w-full grid-cols-1 md:grid-cols-12 gap-12 mx-auto">
-          <div className="col-span-12 md:col-span-8 space-y-16">
+        <div className="grid w-full grid-cols-1 md:grid-cols-3 gap-12 mx-auto">
+          <div className="col-span-3 md:col-span-2 space-y-16">
             {/* Who Am I Section */}
             <section className="space-y-6">
               <h2 className="text-2xl font-bold text-white">Who Am I?</h2>
@@ -290,10 +290,10 @@ export default function About() {
           </div>
 
           {/* Sidebar */}
-          <div className="col-span-12 md:col-span-4 md:sticky md:top-24 h-fit">
+          <div className=" col-span-3 -order-1 md:order-2 md:col-span-1 md:sticky md:top-24 h-fit">
             <div className="space-y-8">
               {/*  CTA */}
-              <div className="space-y-6">
+              <div className="space-y-6 hidden md:block">
                 <GetInTouchButton />
               </div>
               {/* Profile Image */}
@@ -309,10 +309,16 @@ export default function About() {
                   />
                 </div>
               </div>
+              {/*  CTA */}
+              <div className="space-y-6 md:hidden">
+                <GetInTouchButton />
+              </div>
 
               {/* Social Links */}
-              <div className="space-y-8">
-                <h3 className="text-lg font-medium text-white space-y-4">Follow Me</h3>
+              <div className="space-y-8 hidden md:block">
+                <h3 className="text-lg font-medium text-white space-y-4">
+                  Follow Me
+                </h3>
                 <Separator className="bg-white/10" />
                 <ul className="space-y-4">
                   <li>
@@ -322,7 +328,6 @@ export default function About() {
                       rel="noreferrer noopener"
                       className="group flex items-center gap-2 text-muted-foreground hover:text-white transition-colors duration-150"
                     >
-                     
                       <span>GitHub</span>
                       <ArrowUpRight className="w-4 h-4 -translate-x-2 translate-y-2 rotate-45 opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 group-hover:rotate-[405deg]" />
                     </Link>
@@ -334,7 +339,6 @@ export default function About() {
                       rel="noreferrer noopener"
                       className="group flex items-center gap-2 text-muted-foreground hover:text-white transition-colors duration-150"
                     >
-                      
                       <span>Twitter</span>
                       <ArrowUpRight className="w-4 h-4 -translate-x-2 translate-y-2 rotate-45 opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 group-hover:rotate-[405deg]" />
                     </Link>
@@ -346,7 +350,6 @@ export default function About() {
                       rel="noreferrer noopener"
                       className="group flex items-center gap-2 text-muted-foreground hover:text-white transition-colors duration-150"
                     >
-                     
                       <span>LinkedIn</span>
                       <ArrowUpRight className="w-4 h-4 -translate-x-2 translate-y-2 rotate-45 opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 group-hover:rotate-[405deg]" />
                     </Link>
@@ -358,7 +361,6 @@ export default function About() {
                       rel="noreferrer noopener"
                       className="group flex items-center gap-2 text-muted-foreground hover:text-white transition-colors duration-150"
                     >
-                     
                       <span>Instagram</span>
                       <ArrowUpRight className="w-4 h-4 -translate-x-2 translate-y-2 rotate-45 opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 group-hover:rotate-[405deg]" />
                     </Link>
