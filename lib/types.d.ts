@@ -73,3 +73,16 @@ export type GetPostBySlugResponse = {
     };
   };
 };
+
+
+export interface JobExperience {
+  title: string;       
+  company: string;      
+  tenure: string;       
+  responsibilities: string[]; 
+  links?: { title: string; url: string }[];  
+}
+
+export type TimelineProps = {
+  experience: JobExperience;
+}

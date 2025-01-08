@@ -13,15 +13,12 @@ export default function Posts() {
       lastPage.length < 9 ? undefined : lastPage[lastPage.length - 1].cursor,
     initialPageParam: "",
   });
-  return <>
-  {
-    data?.pages.map((page) => (
-        page.map((post) => (
-            <BlogCard key={post.cursor} post={post.node} />
-        ))
-    ))
-  }
-   <div className="col-span-1 lg:col-span-3 w-full flex justify-center my-5">
+  return (
+    <>
+      {data?.pages.map((page) =>
+        page.map((post) => <BlogCard key={post.cursor} post={post.node} />)
+      )}
+      <div className="col-span-1 lg:col-span-3 w-full flex justify-center my-5">
         <Button
           className="w-full"
           variant="outline"
@@ -32,8 +29,9 @@ export default function Posts() {
             ? "Loading..."
             : hasNextPage
             ? "Load more"
-            : "That's all for today!"}
+            : "That&apos;s all for today!"}
         </Button>
       </div>
-    </>;
+    </>
+  );
 }

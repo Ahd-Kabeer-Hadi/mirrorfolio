@@ -10,13 +10,13 @@ export default function Cooking({ from }: { from: string }) {
           <Image src={pilot} alt="pilot" />
           <div className="flex flex-col justify-center content-center">
             <p className="break-words text-5xl font-bold leading-none text-white md:text-[80px]">
-              Bro, I'm still cooking it!
+              Bro, I&apos;m still cooking it!
             </p>
             <p className="mt-8 italic text-[18px] text-[#A1A1AA]">
               this is one of the things that I keep working on my free time.
             </p>
             <p className="mt-2  text-[#A1A1AA] text-xl md:text-2xl">
-              I't'll be ready soon, I promise.
+              I&apos;t&apos;ll be ready soon, I promise.
             </p>
             <p className="mb-16 mt-6 text-[#A1A1AA] text-xl md:text-2xl">
               Meanwhile you can check out some of my{" "}

@@ -13,9 +13,9 @@ export default function Hero() {
         {/* Left Content */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <p className="text-[#A1A1AA] font-inter font-semibold mb-2 text-xl md:text-2xl">
-            Hi, I'm
+            Hi, I&apos;m
           </p>
-          <h2 className="text-4xl md:text-6xl font-syne font-bold mb-4">
+          <h2 className="text-4xl font-syne font-bold mb-4">
             Ahammad Kabeer Hadi
           </h2>
           <h3 className="text-lg md:text-2xl text-gray-300 font-syne mb-4">

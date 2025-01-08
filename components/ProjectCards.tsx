@@ -23,17 +23,20 @@ export function ProjectCards({ variant, limit = 3 }: ProjectCardProps) {
   const hasMoreItems = items.length > displayedItemCount;
 
   // Get items to display based on current count
-  const displayedItems = items.slice(0, displayedItemCount)
+  const displayedItems = items.slice(0, displayedItemCount);
   const handleSeeMore = () => {
-    const newDisplayCount = Math.min(
-      displayedItemCount + limit, 
-      items.length
-    );
+    const newDisplayCount = Math.min(displayedItemCount + limit, items.length);
     setDisplayedItemCount(newDisplayCount);
   };
   return (
     <>
-      <BentoGrid className={variant === "primary" ?" w-full md:auto-rows-auto mx-0 md:grid-cols-1 ": "w-full md:auto-rows-[20rem] mx-0 "}>
+      <BentoGrid
+        className={
+          variant === "primary"
+            ? " w-full md:auto-rows-auto mx-0 md:grid-cols-1 "
+            : "w-full md:auto-rows-[20rem] mx-0 "
+        }
+      >
         {displayedItems.map((item, index) => (
           <BentoGridItem key={index} {...item} />
         ))}
@@ -41,7 +44,7 @@ export function ProjectCards({ variant, limit = 3 }: ProjectCardProps) {
       {variant === "primary" && hasMoreItems && (
         <div className=" py-5">
           <Button
-          onClick={handleSeeMore}
+            onClick={handleSeeMore}
             variant={"ghost"}
             disabled={!hasMoreItems}
             className="w-full rounded-xl inline-flex text-[#A1A1AA] h-12 bg-transparent hover:bg-slate-200/25 items-center justify-center px-6 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
@@ -50,9 +53,12 @@ export function ProjectCards({ variant, limit = 3 }: ProjectCardProps) {
           </Button>
         </div>
       )}
-       {variant === "primary" && !hasMoreItems && (
+      {variant === "primary" && !hasMoreItems && (
         <div className="py-5 text-center text-gray-500">
-          <p>Exciting new projects are on the horizon! Stay tuned for more innovative developments coming soon.</p>
+          <p>
+            Exciting new projects are on the horizon! Stay tuned for more
+            innovative developments coming soon.
+          </p>
         </div>
       )}
     </>
@@ -74,14 +80,18 @@ const items = [
     description: (
       <div className="w-full">
         <p className="font-inter text-xl line-clamp-3 w-full my-3">
-          A transformative project that streamlines inventory, billing, and role operations across a state-wide distribution network. Designed for scalability, the system fosters transparency, efficient workflows, and seamless collaboration between Syndicate Admins, Panchayat Representatives, and Retail Markets.
+          A transformative project that streamlines inventory, billing, and role
+          operations across a state-wide distribution network. Designed for
+          scalability, the system fosters transparency, efficient workflows, and
+          seamless collaboration between Syndicate Admins, Panchayat
+          Representatives, and Retail Markets.
         </p>
         <Button
-            variant={"link"}
-            className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0"
-          >
-            Ongoing
-          </Button>
+          variant={"link"}
+          className="text-[#A1A1AA] hover:underline hover:text-white text-lg pt4 font-syne px-0"
+        >
+          Ongoing
+        </Button>
       </div>
     ),
   },
@@ -99,7 +109,10 @@ const items = [
     description: (
       <div className="w-full">
         <p className="font-inter text-xl line-clamp-3 w-full my-3">
-          Menteor connects ambitious learners with expert mentors for personalized skill-building experiences. Inspired by the simplicity of modern apps, Menteor offers guidance from professionals, creatives, and craftsmen, tailored to your goals.
+          Menteor connects ambitious learners with expert mentors for
+          personalized skill-building experiences. Inspired by the simplicity of
+          modern apps, Menteor offers guidance from professionals, creatives,
+          and craftsmen, tailored to your goals.
         </p>
         <Link href="https://github.com/mirrorfolio/menteor">
           <Button
@@ -126,7 +139,10 @@ const items = [
     description: (
       <div className="w-full">
         <p className="font-inter text-xl line-clamp-3 w-full my-3">
-          Pouch is an innovative MVP that integrates wallet and rewards management for seamless use across services. Developed initially for Menteor, this system features modules for wallet functionality and rewards treasury management, making it versatile and future-ready.
+          Pouch is an innovative MVP that integrates wallet and rewards
+          management for seamless use across services. Developed initially for
+          Menteor, this system features modules for wallet functionality and
+          rewards treasury management, making it versatile and future-ready.
         </p>
         <Link href="https://github.com/Ahd-Kabeer-Hadi/Pouch">
           <Button
@@ -153,7 +169,10 @@ const items = [
     description: (
       <div className="w-full">
         <p className="font-inter text-xl line-clamp-3 w-full my-3">
-          This module revolutionizes school science events by automating announcements, submissions, and results. Built for seamless user experience, it enhances engagement and reduces manual effort in event management.
+          This module revolutionizes school science events by automating
+          announcements, submissions, and results. Built for seamless user
+          experience, it enhances engagement and reduces manual effort in event
+          management.
         </p>
         <Link href="https://www.figma.com/community/file/1269984523674917695/digital-fest">
           <Button
@@ -180,7 +199,9 @@ const items = [
     description: (
       <div className="w-full">
         <p className="font-inter text-xl line-clamp-3 w-full my-3">
-          Automates version updates for LMS with newsletter templates and release tracking. Integrates GPT technology for engaging content, simplifying the process for admins and users alike.
+          Automates version updates for LMS with newsletter templates and
+          release tracking. Integrates GPT technology for engaging content,
+          simplifying the process for admins and users alike.
         </p>
         <Link href="https://www.figma.com/community/file/1269984707660820289/release-note-module">
           <Button
@@ -207,7 +228,9 @@ const items = [
     description: (
       <div className="w-full">
         <p className="font-inter text-xl line-clamp-3 w-full my-3">
-          A web-based IDE tailored for students and coding enthusiasts. Features intuitive glassmorphism design and educational tools, inspiring the next generation of tech talent.
+          A web-based IDE tailored for students and coding enthusiasts. Features
+          intuitive glassmorphism design and educational tools, inspiring the
+          next generation of tech talent.
         </p>
         <Link href="https://www.figma.com/community/file/1269984078143781693/cs-lab-editor-an-integrated-web-based-ide-for-beginners-and-students">
           <Button
@@ -234,7 +257,9 @@ const items = [
     description: (
       <div className="w-full">
         <p className="font-inter text-xl line-clamp-3 w-full my-3">
-          Talentify helps developers returning to work find career opportunities while offering companies access to vetted talent. The platform is designed for career growth and flexible hiring solutions.
+          Talentify helps developers returning to work find career opportunities
+          while offering companies access to vetted talent. The platform is
+          designed for career growth and flexible hiring solutions.
         </p>
         <Link href="https://talentify-pi.vercel.app/">
           <Button
@@ -325,11 +350,11 @@ const items = [
 //       <div className="w-full">
 //         <p className="font-inter text-xl line-clamp-3 w-full my-3">
 //           Pouch is a minimalist MVP project designed to emulate the
-//           functionality of a digital wallet app. Pouch isn't just any wallet
-//           app—it's a versatile platform that can be seamlessly integrated with
+//           functionality of a digital wallet app. Pouch isn&apos;t just any wallet
+//           app—it&apos;s a versatile platform that can be seamlessly integrated with
 //           other services to serve as their wallet and reward management system.
 //           I originally developed Pouch to complement my passion project,
-//           Menteor, which I'm currently working on. Right now, Pouch is in its
+//           Menteor, which I&apos;m currently working on. Right now, Pouch is in its
 //           MVP stage, featuring two main modules: wallet, handling all things
 //           wallet-related, and treasury, designed for managing rewards by admin
 //           users.
@@ -363,7 +388,7 @@ const items = [
 //   //         developer for the Club Sulaimani project, aimed at revitalizing their
 //   //         online presence. Collaborating closely with the team, I spearheaded
 //   //         the rebranding and development efforts to craft a dynamic website
-//   //         tailored precisely to Club Sulaimani's unique brand identity and
+//   //         tailored precisely to Club Sulaimani&apos;s unique brand identity and
 //   //         specific requirements.
 //   //       </p>
 //   //       <Link href="https://clubsulaimani.com">

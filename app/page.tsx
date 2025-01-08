@@ -24,7 +24,9 @@ export default function Home() {
       <section className="px-4 container max-w-7xl mt-12 flex flex-col gap-10">
         <div className="flex flex-col gap-6">
           <div className="flex justify-between items-center">
-            <h2 className="text-4xl font-syne font-semibold">A Glimpse of My Work</h2>
+            <h2 className="text-4xl font-syne font-semibold">
+              A Glimpse of My Work
+            </h2>
             <Link
               href="/projects"
               className="text-[#A1A1AA] hover:underline hover:text-white font-syne"
@@ -139,12 +141,12 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-6 bg-[#18181D]/60 border border-card-border/20 rounded-xl backdrop-filter backdrop-blur-md">
           <div className="flex flex-col gap-4">
             <h2 className="text-3xl font-syne font-semibold">
-              Let's Build Together
+              Let&apos;s Build Together
             </h2>
             <p className="text-sm font-mono text-[#A1A1AA]">
-              If you're ready to take your idea to the next level, let's talk.
-              Schedule a consultation, and together, we'll create something
-              extraordinary.
+              If you&apos;re ready to take your idea to the next level,
+              let&apos;s talk. Schedule a consultation, and together, we&apos;ll
+              create something extraordinary.
             </p>
           </div>
           <Link

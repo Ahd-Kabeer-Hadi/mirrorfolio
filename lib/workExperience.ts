@@ -72,7 +72,7 @@ const workExperience: JobExperience[] = [
 //       "Currently working as a tech consultant and developer for startups with non-tech backgrounds under Mirrorfolio, such as Sozial,menteor, Fozato, and Talentify.",
 //       "Assisting these startups in bootstrapping, building development teams, and establishing technical foundations to kickstart their businesses.",
 //       "Working as a Founder and Lead web developer, undertaking various projects for clients to achieve their goals.",
-     
+
 //       "Providing on-demand mentorship for aspiring developers to maintain my enthusiasm for knowledge transfer.",
 //     ],
 //   },
@@ -87,13 +87,13 @@ const workExperience: JobExperience[] = [
 //       "Provided on-demand mentorship for aspiring developers to maintain my enthusiasm for knowledge transfer.",
 //     ],
 //   },
-  
+
 //   {
 //     title: "Frontend Developer",
 //     company: "Aufait UX",
 //     tenure: "2023 - 2024",
 //     responsibilities: [
-//       "Played a significant role in developing Aufait UX's In-house React UI library, ensuring consistency and efficiency",
+//       "Played a significant role in developing Aufait UX&apos;s In-house React UI library, ensuring consistency and efficiency",
 //       "Demonstrated adaptability by crafting a website for a renowned Indian tea vendor - ClubSulaimani, aligning with client needs and branding.",
 //       "Gained valuable insights into user experiences and UI practices before successfully transitioning into independent Founder and Lead work.",
 //     ],
@@ -106,7 +106,7 @@ const workExperience: JobExperience[] = [
 //     responsibilities: [
 //       "Elevated team performance by spearheading the development and maintenance of multiple applications utilising Angular and React, resulting in enhanced system efficiency and performance",
 //       "Achieved seamless integration of RESTful services using Python with Angular and React applications, bolstering functionality and user experience",
-//       "As an integral component of CyberSquare's School-based training programmes, I fostered knowledge dissemination by educating both students and teachers in programming fundamentals. This initiative culminated in an exceptional 90% pass rate for the end-of-semester exam.",
+//       "As an integral component of CyberSquare&apos;s School-based training programmes, I fostered knowledge dissemination by educating both students and teachers in programming fundamentals. This initiative culminated in an exceptional 90% pass rate for the end-of-semester exam.",
 //     ],
 //   },
 //   {
